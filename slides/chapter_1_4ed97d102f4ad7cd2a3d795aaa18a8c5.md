@@ -21,7 +21,58 @@ title: Co-Chair, Foundation for Advanced Education in the Sciences (FAES)
 
 
 ---
+## Introduction to Python Projects
+
+```yaml
+type: "FullSlide"
+key: "867f3e4a7b"
+```
+
+`@part1`
+Projects come in all shapes and sizes.
+
+Establish principles to follow for all projects.
+
+
+
+
+Project deliverables may be
+- a document describing an analysis,
+- a web app that enables exploration of a dataset,
+- a program that allows runs
+
+
+`@script`
+
+
+
+---
 ## What are modules?
+
+```yaml
+type: "FullSlide"
+key: "d28e7b40dc"
+```
+
+`@part1`
+Modules are
+
+- plain-text files that
+- have a `.py` extension and
+- contain Python code. 
+
+Modules allow code resusability
+- Variables,
+- Functions, and
+- Classes
+
+
+`@script`
+
+
+
+---
+## Modules versus scripts
 
 ```yaml
 type: "FullSlide"
@@ -30,32 +81,20 @@ center_content: false
 ```
 
 `@part1`
-Modules are Python files (`.py`) that contain definitions.
+Modules are similar to scripts in that both
 
-Definitions can include:
-- Variables
-- Functions
-- Classes
+- are plain-text files that
+- have a `.py` extension and
+- contain Python code.
+
+The distinction is that modules should define
+- Variables,
+- Functions, and/or
+- Classes.
 
 
 `@script`
 The Python programming language has a [Batteries Included Philosophy](https://www.python.org/dev/peps/pep-0206/#batteries-included-philosophy). This means that
-
-
----
-## Insert title here...
-
-```yaml
-type: "FullSlide"
-key: "d28e7b40dc"
-```
-
-`@part1`
-
-
-
-`@script`
-
 
 
 ---
