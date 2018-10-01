@@ -112,17 +112,19 @@ key: "d28e7b40dc"
 `@part1`
 There are many ways to run a Python script.
 
-In a shell environment:
+In a shell:
 ```sh
 python my_script.py
 ```
 
-In an IPython environment, like a Jupyter notebook:
+In an IPython console or a Jupyter notebook:
 ```python
 %run my_script.py
 ```
 
-Otherwise, you could use an Integrated Development Environment (IDE), a program designed to
+Otherwise, you could use an Integrated Development Environment (IDE).
+
+ a program designed to
 
 
 `@script`
