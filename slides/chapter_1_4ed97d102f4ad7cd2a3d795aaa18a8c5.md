@@ -33,13 +33,12 @@ Projects come in all shapes and sizes.
 
 Establish principles to follow for all projects.
 
+Embrace the modularity principle.
 
-
-
-Project deliverables may be
-- a document describing an analysis,
-- a web app that enables exploration of a dataset,
-- a program that allows runs
+Advantages of modularity:
+- Easier maintanance and debugging
+- Code reusability
+- Better organization
 
 
 `@script`

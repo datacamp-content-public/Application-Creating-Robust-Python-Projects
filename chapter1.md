@@ -1,6 +1,19 @@
 ---
-title: Test
-description: Test
+title: 'Python project principles'
+description: ""
+---
+
+## Creating Robust Python Projects
+
+```yaml
+type: VideoExercise
+key: 5ceb8b1b4f
+xp: 50
+```
+
+`@projector_key`
+4ed97d102f4ad7cd2a3d795aaa18a8c5
+
 ---
 
 ## An exercise title written in sentence case
@@ -58,16 +71,3 @@ The instructions that follow should be in bullet point form with clear guidance 
 # Update this to something more informative.
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
-
----
-
-## Creating Robust Python Projects
-
-```yaml
-type: VideoExercise
-key: 5ceb8b1b4f
-xp: 50
-```
-
-`@projector_key`
-4ed97d102f4ad7cd2a3d795aaa18a8c5
