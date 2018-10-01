@@ -61,13 +61,12 @@ key: "d00704249b"
 `@part1`
 The opposite of modular is monolithic.
 
-An example of a monolithic file is a Jupyter Notebook that contains all project
+A monolithic file could contain all project
 - code,
 - documentation, and
 - output.
 
 To get the best of both worlds,
-
 1. write modular Python code files and then
 2. combine into monolithic files.
 
@@ -77,7 +76,7 @@ Monolithic files can be convenient, but are a bad starting point.
 
 
 ---
-## Modularity in Practice
+## Scripts versus Modules
 
 ```yaml
 type: "FullSlide"
@@ -85,17 +84,19 @@ key: "ffe2e848d0"
 ```
 
 `@part1`
-Main ways to practice modularity:
-- Write scripts to run in a sequence.
-- Write modules and import code.
+Scripts and modules 
+- are plain-text files that
+- have `.py` extensions and
+- contain Python code.
 
-You can use Jupyter notebooks without sacrificing modularity!
+The key difference is how you use them.
 
-Code sharing done right:
-- A python package that allows me to download and analyze the data
-- A Jupyter Notebook in Google Colab that I can run in my browser
-- A Binder environment that
-In the R programming language, library are loaded with the `library` or `require` functions, whereas scripts are loaded with source`
+| Action | Filetype | Goal                            |
+|--------|----------|---------------------------------|
+| Run    | Script   | Do things, e.g. make a plot     |
+| Import | Module   | Define Classes and/or Functions |
+
+It is possible for the same file to be used as both a module and a script.
 
 
 `@script`
@@ -137,16 +138,7 @@ center_content: false
 ```
 
 `@part1`
-Modules are similar to scripts in that both
 
-- are plain-text files that
-- have a `.py` extension and
-- contain Python code.
-
-The distinction is that modules should define
-- Variables,
-- Functions, and/or
-- Classes.
 
 
 `@script`
