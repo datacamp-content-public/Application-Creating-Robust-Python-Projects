@@ -67,12 +67,42 @@ A monolithic file could, for example, contain all project
 - output.
 
 To get the best of both worlds,
-1. write modular Python code files and then
-2. combine into monolithic files.
+1. start with small files and then
+2. combine the files later on.
 
 
 `@script`
 Monolithic files can be convenient, but are a bad starting point.
+
+
+---
+## Running scripts
+
+```yaml
+type: "FullSlide"
+key: "d28e7b40dc"
+```
+
+`@part1`
+There are many ways to run a Python script.
+
+In a shell:
+```sh
+python my_script.py
+```
+
+In an IPython console or a Jupyter notebook:
+```python
+%run my_script.py
+```
+
+The key is to start thinking of an analysis as a set of steps. 
+
+Each step is done by a script.
+
+
+`@script`
+
 
 
 ---
@@ -99,36 +129,6 @@ The key difference is how you use them.
 
 `@script`
 It is possible for the same file to be used as both a module and a script.
-
-
----
-## Running scripts
-
-```yaml
-type: "FullSlide"
-key: "d28e7b40dc"
-```
-
-`@part1`
-There are many ways to run a Python script.
-
-In a shell:
-```sh
-python my_script.py
-```
-
-In an IPython console or a Jupyter notebook:
-```python
-%run my_script.py
-```
-
-Otherwise, you could use an Integrated Development Environment (IDE).
-
- a program designed to
-
-
-`@script`
-
 
 
 ---
