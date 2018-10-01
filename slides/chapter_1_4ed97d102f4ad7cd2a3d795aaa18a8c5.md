@@ -51,7 +51,7 @@ Project deliverables may be
 
 
 ---
-## The Opposite of modular
+## The Opposite of Modular
 
 ```yaml
 type: "FullSlide"
@@ -60,6 +60,36 @@ key: "d00704249b"
 
 `@part1`
 The opposite of modular is monolithic.
+
+An example of a monolithic file is a Jupyter Notebook that has all of the
+- code,
+- documentation, and
+- output.
+
+Monolithic files can be convenient, but are a bad starting point.
+
+Write scripts first and then `%%load` and `%%run` scripts in your notebook.
+
+You can use notebooks without sacrificing modularity!
+
+
+`@script`
+
+
+
+---
+## Insert title here...
+
+```yaml
+type: "FullSlide"
+key: "ffe2e848d0"
+```
+
+`@part1`
+Code sharing done right:
+- A python package that allows me to download and analyze the data
+- A Jupyter Notebook in Google Colab that I can run in my browser
+- A Binder environment that
 
 
 `@script`
