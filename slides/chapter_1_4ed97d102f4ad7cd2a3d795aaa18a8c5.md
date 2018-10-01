@@ -21,7 +21,7 @@ title: Co-Chair, Foundation for Advanced Education in the Sciences (FAES)
 
 
 ---
-## Introduction to Python Projects
+## Introduction to Python Project Principles
 
 ```yaml
 type: "FullSlide"
@@ -29,16 +29,37 @@ key: "867f3e4a7b"
 ```
 
 `@part1`
-Projects come in all shapes and sizes.
+Goal: Establish principles to follow for all projects.
 
-Establish principles to follow for all projects.
+The modularity principle is especially important.
 
-Embrace the modularity principle.
+Modularity makes code easier to 
+- organize, 
+- maintain, 
+- debug,
+- test, and
+- reuse.
 
-Advantages of modularity:
-- Easier maintanance and debugging
-- Code reusability
-- Better organization
+
+`@script`
+Project come in all shapes and sizes.
+
+Project deliverables may be
+- a document describing an analysis,
+- a web app that enables exploration of a dataset,
+- a program that allows runs
+
+
+---
+## The Opposite of modular
+
+```yaml
+type: "FullSlide"
+key: "d00704249b"
+```
+
+`@part1`
+The opposite of modular is monolithic.
 
 
 `@script`
