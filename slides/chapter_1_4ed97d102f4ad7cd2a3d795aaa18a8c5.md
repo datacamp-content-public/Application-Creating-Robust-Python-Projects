@@ -30,7 +30,7 @@ center_content: false
 ```
 
 `@part1`
-Modules are Python files that contain definitions.
+Modules are Python files (`.py`) that contain definitions.
 
 Definitions can include:
 - Variables
