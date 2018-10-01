@@ -61,7 +61,7 @@ key: "d00704249b"
 `@part1`
 The opposite of modular is monolithic.
 
-An example of a monolithic file is a Jupyter Notebook that has all of the
+An example of a monolithic file is a Jupyter Notebook that contains all project
 - code,
 - documentation, and
 - output.
