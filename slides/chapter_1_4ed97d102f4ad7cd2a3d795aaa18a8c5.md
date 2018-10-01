@@ -61,7 +61,7 @@ key: "d00704249b"
 `@part1`
 The opposite of modular is monolithic.
 
-A monolithic file could contain all project
+A monolithic file could, for example, contain all project
 - code,
 - documentation, and
 - output.
@@ -84,7 +84,7 @@ key: "ffe2e848d0"
 ```
 
 `@part1`
-Scripts and modules 
+Scripts and modules
 - are plain-text files that
 - have `.py` extensions and
 - contain Python code.
@@ -96,11 +96,9 @@ The key difference is how you use them.
 | Run    | Script   | Do things, e.g. make a plot     |
 | Import | Module   | Define classes and/or functions |
 
-It is possible for the same file to be used as both a module and a script.
-
 
 `@script`
-
+It is possible for the same file to be used as both a module and a script.
 
 
 ---
@@ -112,7 +110,19 @@ key: "d28e7b40dc"
 ```
 
 `@part1`
-To make a module that can also be executed as a script
+There are many ways to run a Python script.
+
+In a shell environment:
+```sh
+python my_script.py
+```
+
+In an IPython environment, like a Jupyter notebook:
+```python
+%run my_script.py
+```
+
+Otherwise, you could use an Integrated Development Environment (IDE), a program designed to
 
 
 `@script`
