@@ -94,7 +94,7 @@ The key difference is how you use them.
 | Action | Filetype | Goal                            |
 |--------|----------|---------------------------------|
 | Run    | Script   | Do things, e.g. make a plot     |
-| Import | Module   | Define Classes and/or Functions |
+| Import | Module   | Define classes and/or functions |
 
 It is possible for the same file to be used as both a module and a script.
 
@@ -104,7 +104,7 @@ It is possible for the same file to be used as both a module and a script.
 
 
 ---
-## What are modules?
+## Running scripts
 
 ```yaml
 type: "FullSlide"
@@ -112,16 +112,7 @@ key: "d28e7b40dc"
 ```
 
 `@part1`
-Modules are
-
-- plain-text files that
-- have a `.py` extension and
-- contain Python code. 
-
-Modules allow code resusability
-- Variables,
-- Functions, and
-- Classes
+To make a module that can also be executed as a script
 
 
 `@script`
@@ -129,7 +120,7 @@ Modules allow code resusability
 
 
 ---
-## Modules versus scripts
+## Importing modules
 
 ```yaml
 type: "FullSlide"
@@ -143,6 +134,22 @@ center_content: false
 
 `@script`
 The Python programming language has a [Batteries Included Philosophy](https://www.python.org/dev/peps/pep-0206/#batteries-included-philosophy). This means that
+
+
+---
+## Running a module as a script
+
+```yaml
+type: "FullSlide"
+key: "4b698e100b"
+```
+
+`@part1`
+
+
+
+`@script`
+
 
 
 ---
