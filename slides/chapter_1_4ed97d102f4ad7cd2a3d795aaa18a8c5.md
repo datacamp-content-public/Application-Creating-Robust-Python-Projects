@@ -3,7 +3,7 @@ title: Insert title here
 key: 4ed97d102f4ad7cd2a3d795aaa18a8c5
 
 ---
-## Python modules
+## Python Project Principles
 
 ```yaml
 type: "TitleSlide"
@@ -21,7 +21,7 @@ title: Co-Chair, Foundation for Advanced Education in the Sciences (FAES)
 
 
 ---
-## Introduction to Python Project Principles
+## The Modularity Principle
 
 ```yaml
 type: "FullSlide"
@@ -29,7 +29,7 @@ key: "867f3e4a7b"
 ```
 
 `@part1`
-Goal: Establish principles to follow for all projects.
+Lesson Goal: Establish principles to follow for all projects.
 
 The modularity principle is especially important.
 
@@ -51,7 +51,7 @@ Project deliverables may be
 
 
 ---
-## The Opposite of Modular
+## Modular versus Monolithic
 
 ```yaml
 type: "FullSlide"
@@ -66,19 +66,18 @@ An example of a monolithic file is a Jupyter Notebook that has all of the
 - documentation, and
 - output.
 
-Monolithic files can be convenient, but are a bad starting point.
+To get the best of both worlds,
 
-Instead, write scripts to `%load` and `%run` in your notebooks.
-
-You can use notebooks without sacrificing modularity!
+1. write Python scripts and then
+2. combine into monolithic files.
 
 
 `@script`
-
+Monolithic files can be convenient, but are a bad starting point.
 
 
 ---
-## Insert title here...
+## Modularity in Practice
 
 ```yaml
 type: "FullSlide"
@@ -86,10 +85,13 @@ key: "ffe2e848d0"
 ```
 
 `@part1`
+You can use notebooks without sacrificing modularity!
+
 Code sharing done right:
 - A python package that allows me to download and analyze the data
 - A Jupyter Notebook in Google Colab that I can run in my browser
 - A Binder environment that
+In the R programming language, library are loaded with the `library` or `require` functions, whereas scripts are loaded with source`
 
 
 `@script`
