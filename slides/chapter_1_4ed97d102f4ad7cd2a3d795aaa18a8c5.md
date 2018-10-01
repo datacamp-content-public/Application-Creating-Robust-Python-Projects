@@ -68,7 +68,7 @@ An example of a monolithic file is a Jupyter Notebook that has all of the
 
 Monolithic files can be convenient, but are a bad starting point.
 
-Write scripts first and then `%%load` and `%%run` scripts in your notebook.
+Instead, write scripts to `%load` and `%run` in your notebooks.
 
 You can use notebooks without sacrificing modularity!
 
