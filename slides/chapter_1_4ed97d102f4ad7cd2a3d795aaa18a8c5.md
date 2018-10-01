@@ -3,7 +3,7 @@ title: Insert title here
 key: 4ed97d102f4ad7cd2a3d795aaa18a8c5
 
 ---
-## Python imports
+## Python modules
 
 ```yaml
 type: "TitleSlide"
@@ -21,7 +21,7 @@ title: Co-Chair, Foundation for Advanced Education in the Sciences (FAES)
 
 
 ---
-## Why import code in Python?
+## What are modules?
 
 ```yaml
 type: "FullSlide"
@@ -30,17 +30,12 @@ center_content: false
 ```
 
 `@part1`
-Python comes with [Batteries Included](https://www.python.org/dev/peps/pep-0206/#batteries-included-philosophy)!
+Modules are Python files that contain definitions.
 
-Built-in objects (builtins) are ready-to-use, right out-of-the-box. 
-
-Builtins do not need to be imported with the `import` statement.
-
-The easiest way to list all of the builtins is to import the `builtins` object. 
-```
-import builtins
-help(builtins)
-```
+Definitions can include:
+- Variables
+- Functions
+- Classes
 
 
 `@script`
