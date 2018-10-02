@@ -149,9 +149,11 @@ with open(filename, 'w') as f:
 
 Don't repeat code! Reuse it!
 
-If we were working with a monolithic file, we could define a function that produces files and use it throughout the file.
+In a monolithic file, we could define a function and use it throughout the file.
 
-When working with modular files, we will have to save our function definition in a Python code file called a module.
+Defining the same function in multiple scripts would be repetitive.
+
+Instead, we will save our function definition in a Python code file called a module.
 
 
 `@script`
@@ -167,9 +169,9 @@ key: "ae33b5d1d6"
 ```
 
 `@part1`
-To avoid code repetition in your scripts, you can move class and function definitions into modules.
+To avoid code repetition, you can move class and function definitions into modules.
 
-The key difference between scripts and modules is same how they are used. 
+Scripts and modules are similar in many way, but differ in how they are used. 
 
 | Action | Filetype | Goal                            |
 |--------|----------|---------------------------------|
@@ -190,7 +192,7 @@ if __name__ == '__main__':
 
 
 ---
-## Insert title here...
+## Using modules
 
 ```yaml
 type: "FullSlide"
@@ -198,16 +200,16 @@ key: "919381ac3b"
 ```
 
 `@part1`
-Step 1. Write a function named `to_file` that saves a Python object to a file.
+Writing and importing can be as easy as 1, 2, 3!
+
+1. Write a function named `to_file` that saves a Python object to a file:
 ```python
 def to_file(filename, contents):
     with open(filename, 'w') as f:
         f.write(contents)
 ```
-Step 2. Save the function in a file called `my_module.py`.
-
-Step 3. In every script that produces a file, import the `to_file` function.
-
+2. Save the function in a file called `my_module.py`.
+3. Import the `to_file` function into every script that produces a file:
 ```python
 import my_module
 answer = "The answer to life is 42."
