@@ -169,7 +169,9 @@ key: "ae33b5d1d6"
 ```
 
 `@part1`
-To avoid code repetition, you can move class and function definitions into modules.
+Modules allow us to avoid code repetition, by making class and function definitions throughout a project.
+
+Then, we can use the `import` statement to make the function definition available in each file that needs it.
 
 Scripts and modules are similar in many way, but differ in how they are used. 
 
@@ -230,8 +232,6 @@ key: "ce9b795f3d"
 ```
 
 `@part1`
-When working with modular scripts, will need to use the `import` statement to make the function definition available in each file.
-
 The
 
 
