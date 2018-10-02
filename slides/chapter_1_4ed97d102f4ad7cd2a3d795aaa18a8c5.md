@@ -224,22 +224,6 @@ my_module.to_file('answer.txt', answer)
 
 
 ---
-## Avoid code repetition (2)
-
-```yaml
-type: "FullSlide"
-key: "ce9b795f3d"
-```
-
-`@part1`
-The
-
-
-`@script`
-
-
-
----
 ## Importing modules
 
 ```yaml
@@ -269,7 +253,15 @@ key: "4b698e100b"
 
 
 `@script`
+It is possible for the same file to be used as both a module and a script.
+```python
+#
+def say_hi():
+    print("Hi!")
 
+if __name__ == '__main__':
+    say_hi()
+```
 
 
 ---
