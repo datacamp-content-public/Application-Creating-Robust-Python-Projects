@@ -67,12 +67,37 @@ A monolithic file could, for example, contain all project
 - output.
 
 To get the best of both worlds,
-1. start with small files and then
-2. combine the files later on.
+1. start with small Python code files called scripts and then
+2. combine the scripts into a larger file later on.
 
 
 `@script`
 Monolithic files can be convenient, but are a bad starting point.
+
+
+---
+## Python scripts
+
+```yaml
+type: "FullSlide"
+key: "4de73bc2a6"
+```
+
+`@part1`
+Scripts
+- are plain-text files that
+- have `.py` extensions and
+- contain Python code.
+
+Scripts in data science projects are typically run in a particular order.
+
+This order can visualized as a diagram called a directed acyclic graph (DAG). 
+
+![](https://ndownloader.figshare.com/files/13168322/preview/13168322/preview.jpg)
+
+
+`@script`
+
 
 
 ---
