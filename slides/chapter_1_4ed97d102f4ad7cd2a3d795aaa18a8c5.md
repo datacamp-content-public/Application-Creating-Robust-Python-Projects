@@ -109,7 +109,7 @@ key: "d28e7b40dc"
 ```
 
 `@part1`
-There are many ways to run a Python script.
+There are many ways to run Python scripts.
 
 In a shell:
 ```sh
@@ -121,9 +121,9 @@ In an IPython console or a Jupyter notebook:
 %run my_script.py
 ```
 
-The key is to start thinking of an analysis as a set of steps. 
-
-Each step is done by a script.
+1. Write and run code interactively
+2. Run scripts in a sequence
+3. Automate the sequence
 
 
 `@script`
@@ -131,7 +131,7 @@ Each step is done by a script.
 
 
 ---
-## Scripts versus Modules
+## Avoid code repetition (1)
 
 ```yaml
 type: "FullSlide"
@@ -139,21 +139,63 @@ key: "ffe2e848d0"
 ```
 
 `@part1`
-Scripts and modules
-- are plain-text files that
-- have `.py` extensions and
-- contain Python code.
+While working on a project, you may notice common patterns.
 
-The key difference is how you use them.
+For example, every script that produces a file include
+```python
+with open(filename, 'w') as f:
+    f.write(contents)
+```
+
+Don't repeat code! Reuse it!
+
+Step 1. Rewrite this code as a function named `write_file`.
+```python
+def write_file(filename, contents):
+    with open(filename, 'w') as f:
+        f.write(contents)
+```
+
+
+`@script`
+
+
+
+---
+## Avoid code repetition (2)
+
+```yaml
+type: "FullSlide"
+key: "ce9b795f3d"
+```
+
+`@part1`
+If we were working with a monolithic file we could define the function at the top and use it throughout the file.
+
+When working with modular scripts, will need to use the `import` statement to make the function definition available in each file.
+
+The
+
+
+`@script`
+To avoid code repetition in your scripts, you can move class and function definitions into modules.
+
+The key difference between scripts and modules is same as scripts. 
 
 | Action | Filetype | Goal                            |
 |--------|----------|---------------------------------|
 | Run    | Script   | Do things, e.g. make a plot     |
 | Import | Module   | Define classes and/or functions |
 
-
-`@script`
 It is possible for the same file to be used as both a module and a script.
+```python
+#
+def say_hi():
+    print("Hi!")
+
+if __name__ == '__main__':
+    say_hi()
+```
 
 
 ---
