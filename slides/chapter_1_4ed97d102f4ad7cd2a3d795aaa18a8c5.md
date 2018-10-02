@@ -131,7 +131,7 @@ In an IPython console or a Jupyter notebook:
 
 
 ---
-## Avoid code repetition (1)
+## Avoid code repetition
 
 ```yaml
 type: "FullSlide"
@@ -141,7 +141,7 @@ key: "ffe2e848d0"
 `@part1`
 While working on a project, you may notice common patterns.
 
-For example, every script that produces a file include
+For example, every script that produces a file might include
 ```python
 with open(filename, 'w') as f:
     f.write(contents)
@@ -149,11 +149,69 @@ with open(filename, 'w') as f:
 
 Don't repeat code! Reuse it!
 
-Step 1. Rewrite this code as a function named `write_file`.
+If we were working with a monolithic file, we could define a function that produces files and use it throughout the file.
+
+When working with modular files, we will have to save our function definition in a Python code file called a module.
+
+
+`@script`
+
+
+
+---
+## Scripts versus modules
+
+```yaml
+type: "FullSlide"
+key: "ae33b5d1d6"
+```
+
+`@part1`
+To avoid code repetition in your scripts, you can move class and function definitions into modules.
+
+The key difference between scripts and modules is same how they are used. 
+
+| Action | Filetype | Goal                            |
+|--------|----------|---------------------------------|
+| Run    | Script   | Do things, e.g. create a plot   |
+| Import | Module   | Define classes and/or functions |
+
+
+`@script`
+It is possible for the same file to be used as both a module and a script.
 ```python
-def write_file(filename, contents):
+#
+def say_hi():
+    print("Hi!")
+
+if __name__ == '__main__':
+    say_hi()
+```
+
+
+---
+## Insert title here...
+
+```yaml
+type: "FullSlide"
+key: "919381ac3b"
+```
+
+`@part1`
+Step 1. Write a function named `to_file` that saves a Python object to a file.
+```python
+def to_file(filename, contents):
     with open(filename, 'w') as f:
         f.write(contents)
+```
+Step 2. Save the function in a file called `my_module.py`.
+
+Step 3. In every script that produces a file, import the `to_file` function.
+
+```python
+import my_module
+answer = "The answer to life is 42."
+my_module.to_file('answer.txt', answer)
 ```
 
 
@@ -170,32 +228,13 @@ key: "ce9b795f3d"
 ```
 
 `@part1`
-If we were working with a monolithic file we could define the function at the top and use it throughout the file.
-
 When working with modular scripts, will need to use the `import` statement to make the function definition available in each file.
 
 The
 
 
 `@script`
-To avoid code repetition in your scripts, you can move class and function definitions into modules.
 
-The key difference between scripts and modules is same as scripts. 
-
-| Action | Filetype | Goal                            |
-|--------|----------|---------------------------------|
-| Run    | Script   | Do things, e.g. make a plot     |
-| Import | Module   | Define classes and/or functions |
-
-It is possible for the same file to be used as both a module and a script.
-```python
-#
-def say_hi():
-    print("Hi!")
-
-if __name__ == '__main__':
-    say_hi()
-```
 
 
 ---
