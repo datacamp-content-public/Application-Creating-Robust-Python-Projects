@@ -202,7 +202,7 @@ key: "919381ac3b"
 ```
 
 `@part1`
-Writing and importing can be as easy as 1, 2, 3!
+Writing and importing modules can be as easy as 1, 2, 3!
 
 1. Write a function named `to_file` that saves a Python object to a file:
 ```python
