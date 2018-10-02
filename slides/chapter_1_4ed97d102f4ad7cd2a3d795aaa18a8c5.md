@@ -67,7 +67,7 @@ A monolithic file could, for example, contain all project
 - output.
 
 To get the best of both worlds,
-1. start with small Python code files called scripts and then
+1. start with small code files called scripts and then
 2. combine the scripts into a larger file later on.
 
 
@@ -109,7 +109,9 @@ key: "d28e7b40dc"
 ```
 
 `@part1`
-There are many ways to run Python scripts.
+There are many programs that you can use to writWhen you are writing your scripts you may find it useful to run lines of code using a code editor program.
+
+The next step is to master running entire Python scripts. While most code editors, 
 
 In a shell:
 ```sh
