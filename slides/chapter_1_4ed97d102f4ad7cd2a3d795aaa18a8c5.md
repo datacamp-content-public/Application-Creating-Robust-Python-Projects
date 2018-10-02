@@ -109,7 +109,8 @@ key: "d28e7b40dc"
 ```
 
 `@part1`
-There are many programs that you can use to writWhen you are writing your scripts you may find it useful to run lines of code using a code editor program.
+You can write and run scripts in code editor programs, like Visual Studio Code, PyCharm,
+You may may find it useful, run lines of code using a code editor program.
 
 The next step is to master running entire Python scripts. While most code editors, 
 
@@ -117,6 +118,7 @@ In a shell:
 ```sh
 python my_script.py
 ```
+
 
 In an IPython console or a Jupyter notebook:
 ```python
