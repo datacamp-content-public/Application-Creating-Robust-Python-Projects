@@ -33,7 +33,7 @@ A project is a directory that contains project files.
 
 Learning Goal: Establish principles to follow for all projects.
 
-The Modularity and Reusability principles make code easier to 
+Following the Modularity and Reusability Principles makes code easier to 
 - read,
 - organize, 
 - maintain, 
@@ -76,7 +76,7 @@ Monolithic files can be convenient, but are a bad starting point.
 
 
 ---
-## Python scripts
+## Python Scripts
 
 ```yaml
 type: "FullSlide"
@@ -101,7 +101,7 @@ This order can visualized as a diagram called a directed acyclic graph (DAG).
 
 
 ---
-## The Reusability Principle
+## Don't Repeat Yourself (DRY)
 
 ```yaml
 type: "FullSlide"
@@ -202,7 +202,7 @@ To print "Hello World",
 1. Add a function call to `greet.py`:
 ```python
 import say
-say.hello
+say.hello()
 ```
 
 2. Run the `greet.py` script in a shell: 
@@ -226,7 +226,7 @@ key: "4b698e100b"
 `@part1`
 It is possible for the same file to be used as both a module and a script.
 
-Add the code below to `say.py`
+Add the code below to `say.py`:
 ```python
 if __name__ == '__main__':
     hello()
@@ -259,23 +259,23 @@ key: "bfeb750a7e"
 ```
 
 `@part1`
-1. Rename `say.py` as `__main__.py` 
-2. Go up one level in your folder system and 
-3. run `my_project`
+1. Create a copy of `say.py` called `__main__.py` 
+2. Go up one level in your folder system
+3. Run the project
+
 ```bash
-mv say.py __main__.py
+cp say.py __main__.py
 cd ..
 python my_project
 ```
 
-Some advantages of this are:
-You can zip the whole project and still run `__main__.py`
+You can zip the whole project and run it:
 ```bash
 python -m zipfile -c my_project.zip my_project/*
 python my_project.zip
 ```
 
-Convenience of a single file without sacrificing modularity!
+The convenience of a single file without sacrificing modularity!
 
 
 `@script`
