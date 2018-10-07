@@ -21,7 +21,7 @@ title: Co-Chair, Foundation for Advanced Education in the Sciences (FAES)
 
 
 ---
-## The Modularity Principle
+## Modularity and Reusability
 
 ```yaml
 type: "FullSlide"
@@ -29,18 +29,16 @@ key: "867f3e4a7b"
 ```
 
 `@part1`
-Lesson Goal: Establish principles to follow for all projects.
-
 A project is a directory that contains project files.
 
-The modularity principle is especially important for projects.
+Learning Goal: Establish principles to follow for all projects.
 
-Modularity makes code easier to 
+The Modularity and Reusability principles make code easier to 
+- read,
 - organize, 
 - maintain, 
-- debug,
-- test, and
-- reuse.
+- debug, and
+- test.
 
 
 `@script`
@@ -68,7 +66,7 @@ A monolithic file could, for example, contain all project
 - documentation, and
 - output.
 
-To get the best of both worlds,
+The benefits of modularity with the convenience of a single file:
 1. start with small code files called scripts and then
 2. combine the scripts into a larger file later on.
 
@@ -103,6 +101,94 @@ This order can visualized as a diagram called a directed acyclic graph (DAG).
 
 
 ---
+## The Reusability Principle
+
+```yaml
+type: "FullSlide"
+key: "ffe2e848d0"
+```
+
+`@part1`
+While working on a project, you may notice common patterns.
+
+Don't repeat code! Reuse it!
+
+In a monolithic file, we could define a function and use it throughout the file.
+
+Defining the same function in multiple scripts would be repetitive.
+
+Instead, we will save our function definition in a Python code file called a module.
+
+Moving function definitions to modules -> smaller scripts
+
+
+`@script`
+
+
+
+---
+## Scripts versus modules
+
+```yaml
+type: "FullSlide"
+key: "ae33b5d1d6"
+```
+
+`@part1`
+Modules allow us to avoid code repetition, by making class and function definitions available throughout a project.
+
+We can use the `import` statement to make the function definition available in each file that needs it.
+
+Scripts and modules are similar in many ways, but differ in how and why they are used. 
+
+| Action | Filetype | Goal                            |
+|--------|----------|---------------------------------|
+| Run    | Script   | Do things, e.g. create a plot   |
+| Import | Module   | Define classes and/or functions |
+
+
+`@script`
+It is possible for the same file to be used as both a module and a script.
+```python
+#
+def say_hi():
+    print("Hi!")
+
+if __name__ == '__main__':
+    say_hi()
+```
+
+
+---
+## Importing modules
+
+```yaml
+type: "FullSlide"
+key: "919381ac3b"
+```
+
+`@part1`
+1. Create a file called `say.py`
+```python
+def hello():
+       print("Hello World!")
+```
+2. In a separate file called `greet.py`, import `say`
+```python
+import say
+say.hello()
+```
+
+In the example above, 
+- `say.py` is a module and
+- `greet.py` is a script that imports the `say` module
+
+
+`@script`
+
+
+
+---
 ## Running scripts
 
 ```yaml
@@ -111,25 +197,73 @@ key: "d28e7b40dc"
 ```
 
 `@part1`
-You can run scripts in a code editor program, or
-
-In an IPython console or a Jupyter notebook:
-```python
-%run my_script.py
-```
-
-a shell:
+You can run the `greet.py` script in a shell,
 ```sh
-python my_script.py
+python greet.py
 ```
 
-1. Run a single script
-2. Run scripts in a sequence
-3. Automate the sequence
+or an IPython console / a Jupyter notebook.
+```python
+%run greet.py
+```
+
+This will 
+1. import the `say` module and then 
+2. call its `hello` function to `print` "Hello World!"
 
 
 `@script`
 
+
+
+---
+## Running modules as scripts
+
+```yaml
+type: "FullSlide"
+key: "4b698e100b"
+```
+
+`@part1`
+It is possible for the same file to be used as both a module and a script.
+
+Add the code below to `say.py`
+```python
+if __name__ == '__main__':
+    hello()
+```
+Now running `say.py` using a shell or IPython will also print "Hello World".
+
+This approach works best when we only want to call one function from a module.
+
+
+`@script`
+It is possible for the same file to be used as both a module and a script.
+```python
+#
+def say_hi():
+    print("Hi!")
+
+if __name__ == '__main__':
+    say_hi()
+```
+
+
+---
+## Importing modules
+
+```yaml
+type: "FullSlide"
+key: "ab730708e1"
+center_content: false
+```
+
+`@part1`
+
+
+
+`@script`
+The Python programming language has a [Batteries Included Philosophy](https://www.python.org/dev/peps/pep-0206/#batteries-included-philosophy). This means that
 
 
 ---
@@ -172,148 +306,6 @@ python my_project.zip
 ```
 
 Later in the course we will learn other ways to distribute Python code.
-
-
----
-## The Reusability Principle
-
-```yaml
-type: "FullSlide"
-key: "ffe2e848d0"
-```
-
-`@part1`
-While working on a project, you may notice common patterns.
-
-For example, every script that produces a file might include
-```python
-with open(filename, 'w') as f:
-    f.write(contents)
-```
-
-Don't repeat code! Reuse it!
-
-In a monolithic file, we could define a function and use it throughout the file.
-
-Defining the same function in multiple scripts would be repetitive.
-
-Instead, we will save our function definition in a Python code file called a module.
-
-
-`@script`
-
-
-
----
-## Scripts versus modules
-
-```yaml
-type: "FullSlide"
-key: "ae33b5d1d6"
-```
-
-`@part1`
-Modules allow us to avoid code repetition, by making class and function definitions throughout a project.
-
-Then, we can use the `import` statement to make the function definition available in each file that needs it.
-
-Scripts and modules are similar in many way, but differ in how they are used. 
-
-| Action | Filetype | Goal                            |
-|--------|----------|---------------------------------|
-| Run    | Script   | Do things, e.g. create a plot   |
-| Import | Module   | Define classes and/or functions |
-
-
-`@script`
-It is possible for the same file to be used as both a module and a script.
-```python
-#
-def say_hi():
-    print("Hi!")
-
-if __name__ == '__main__':
-    say_hi()
-```
-
-
----
-## Importing modules
-
-```yaml
-type: "FullSlide"
-key: "919381ac3b"
-```
-
-`@part1`
-Writing and importing modules can be as easy as 1, 2, 3!
-
-1. Write a function named `to_file` that saves a Python object to a file:
-```python
-def to_file(filename, contents):
-    with open(filename, 'w') as f:
-        f.write(contents)
-```
-2. Save the function in a file called `my_module.py`.
-3. Import the `to_file` function into every script that produces a file:
-```python
-import my_module
-answer = "The answer to life is 42."
-my_module.to_file('answer.txt', answer)
-```
-
-
-`@script`
-
-
-
----
-## Running modules as scripts
-
-```yaml
-type: "FullSlide"
-key: "4b698e100b"
-```
-
-`@part1`
-It is possible for the same file to be used as both a module and a script.
-```python
-#
-def say_hello():
-    print("Hello World!")
-
-if __name__ == '__main__':
-    say_hello()
-```
-
-
-`@script`
-It is possible for the same file to be used as both a module and a script.
-```python
-#
-def say_hi():
-    print("Hi!")
-
-if __name__ == '__main__':
-    say_hi()
-```
-
-
----
-## Importing modules
-
-```yaml
-type: "FullSlide"
-key: "ab730708e1"
-center_content: false
-```
-
-`@part1`
-
-
-
-`@script`
-The Python programming language has a [Batteries Included Philosophy](https://www.python.org/dev/peps/pep-0206/#batteries-included-philosophy). This means that
 
 
 ---
