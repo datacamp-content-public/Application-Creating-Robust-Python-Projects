@@ -67,8 +67,8 @@ A monolithic file could, for example, contain all project
 - output.
 
 The benefits of modularity with the convenience of a single file:
-1. start with small code files and then
-2. combine the small files into a larger file later on.
+1. start with small files and then
+2. combine them into a larger file later on.
 
 
 `@script`
@@ -207,11 +207,11 @@ Add the code below to `say.py`:
 if __name__ == '__main__':
     hello()
 ```
-Now running `say.py` in a shell will also print "Hello World".
+Now running `say.py` in a shell will also print "Hello World!".
 
 The difference is that we can import the `hello` function from `say.py`, but not `greet.py`.
 
-This approach works best when we only want to call one function from a module.
+This approach works when we only want to call one function from a module.
 
 
 `@script`
