@@ -88,7 +88,7 @@ While working on a project, you may notice common patterns.
 
 Don't repeat code! Reuse it!
 
-If code repeats in one file, we could define a function and use it throughout the file.
+One way to deal with code repetition is to define a function.
 
 Defining the same function in multiple code files would be repetitive.
 
@@ -184,35 +184,7 @@ def hello():
 import say
 say.hello()
 ```
-
-
-`@script`
-
-
-
----
-## Running scripts
-
-```yaml
-type: "FullSlide"
-key: "d28e7b40dc"
-```
-
-`@part1`
-Right now, running `greet.py` will have no effect. 
-
-To print "Hello World",
-
-1. Add a function call to `greet.py`:
-```python
-import say
-say.hello()
-```
-
-2. Run the `greet.py` script in a shell: 
-```bash
-python greet.py
-```
+3. Run the `greet.py` script in a shell as before.
 
 
 `@script`
@@ -263,13 +235,15 @@ key: "bfeb750a7e"
 ```
 
 `@part1`
-1. Create a copy of `say.py` called `__main__.py` 
-2. Go up one level in your folder system
-3. Run the project
+1. Create a directory called `my_project`
+2. Make a copy of `say.py` called `__main__.py` 
+3. Move `__main__.py` into `my_project`
+4. Run the project
 
 ```bash
+mkdir my_project
 cp say.py __main__.py
-cd ..
+mv __main__.py my_project
 python my_project
 ```
 
@@ -278,8 +252,6 @@ You can zip the whole project and run it:
 python -m zipfile -c my_project.zip my_project/*
 python my_project.zip
 ```
-
-The convenience of a single file without sacrificing modularity!
 
 
 `@script`
