@@ -31,7 +31,9 @@ key: "867f3e4a7b"
 `@part1`
 Lesson Goal: Establish principles to follow for all projects.
 
-The modularity principle is especially important.
+A project is a directory that contains project files.
+
+The modularity principle is especially important for projects.
 
 Modularity makes code easier to 
 - organize, 
@@ -109,23 +111,19 @@ key: "d28e7b40dc"
 ```
 
 `@part1`
-You can write and run scripts in code editor programs, like Visual Studio Code, PyCharm,
-You may may find it useful, run lines of code using a code editor program.
-
-The next step is to master running entire Python scripts. While most code editors, 
-
-In a shell:
-```sh
-python my_script.py
-```
-
+You can run scripts in a code editor program, or
 
 In an IPython console or a Jupyter notebook:
 ```python
 %run my_script.py
 ```
 
-1. Write and run code interactively
+a shell:
+```sh
+python my_script.py
+```
+
+1. Run a single script
 2. Run scripts in a sequence
 3. Automate the sequence
 
@@ -135,7 +133,49 @@ In an IPython console or a Jupyter notebook:
 
 
 ---
-## Avoid code repetition
+## Running projects
+
+```yaml
+type: "FullSlide"
+key: "bfeb750a7e"
+```
+
+`@part1`
+Running an entire project
+
+1. Create a `__main__.py` file in a directory called `my_project`
+2. Include code in the file, e.g. `print("This is my project!")`
+3. Run `python my_project`
+
+Some advantages of this are:
+You can zip the whole project and still run `__main__.py`
+```bash
+python -m zipfile -c my_project.zip my_project/*
+python my_project.zip
+```
+
+Convenience of a single file without sacrificing modularity!
+
+
+`@script`
+Running an entire project
+
+1. Create a `__main__.py` file in a directory called `my_project`
+2. Include code in the file, e.g. `print("This is my project!")`
+3. Run `python my_project`
+
+Some advantages of this are:
+You can zip the whole project and still run `__main__.py`
+```bash
+python -m zipfile -c my_project.zip my_project/*
+python my_project.zip
+```
+
+Later in the course we will learn other ways to distribute Python code.
+
+
+---
+## The Reusability Principle
 
 ```yaml
 type: "FullSlide"
@@ -198,7 +238,7 @@ if __name__ == '__main__':
 
 
 ---
-## Using modules
+## Importing modules
 
 ```yaml
 type: "FullSlide"
@@ -228,6 +268,38 @@ my_module.to_file('answer.txt', answer)
 
 
 ---
+## Running modules as scripts
+
+```yaml
+type: "FullSlide"
+key: "4b698e100b"
+```
+
+`@part1`
+It is possible for the same file to be used as both a module and a script.
+```python
+#
+def say_hello():
+    print("Hello World!")
+
+if __name__ == '__main__':
+    say_hello()
+```
+
+
+`@script`
+It is possible for the same file to be used as both a module and a script.
+```python
+#
+def say_hi():
+    print("Hi!")
+
+if __name__ == '__main__':
+    say_hi()
+```
+
+
+---
 ## Importing modules
 
 ```yaml
@@ -242,30 +314,6 @@ center_content: false
 
 `@script`
 The Python programming language has a [Batteries Included Philosophy](https://www.python.org/dev/peps/pep-0206/#batteries-included-philosophy). This means that
-
-
----
-## Running a module as a script
-
-```yaml
-type: "FullSlide"
-key: "4b698e100b"
-```
-
-`@part1`
-
-
-
-`@script`
-It is possible for the same file to be used as both a module and a script.
-```python
-#
-def say_hi():
-    print("Hi!")
-
-if __name__ == '__main__':
-    say_hi()
-```
 
 
 ---
