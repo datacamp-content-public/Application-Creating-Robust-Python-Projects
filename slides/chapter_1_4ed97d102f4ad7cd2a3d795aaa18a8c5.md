@@ -31,7 +31,7 @@ key: "867f3e4a7b"
 `@part1`
 A project is a directory that contains project files.
 
-Learning Goal: Establish principles to follow for all projects.
+Learning Goal: Establish principles to follow for all projects
 
 Following the Modularity and Reusability Principles makes code easier to 
 - read,
@@ -67,37 +67,12 @@ A monolithic file could, for example, contain all project
 - output.
 
 The benefits of modularity with the convenience of a single file:
-1. start with small code files called scripts and then
-2. combine the scripts into a larger file later on.
+1. start with small code files and then
+2. combine the small files into a larger file later on.
 
 
 `@script`
 Monolithic files can be convenient, but are a bad starting point.
-
-
----
-## Python Scripts
-
-```yaml
-type: "FullSlide"
-key: "4de73bc2a6"
-```
-
-`@part1`
-Scripts
-- are plain-text files that
-- have `.py` extensions and
-- contain Python code.
-
-Scripts in data science projects are typically run in a particular order.
-
-This order can visualized as a diagram called a directed acyclic graph (DAG). 
-
-![](https://ndownloader.figshare.com/files/13168322/preview/13168322/preview.jpg)
-
-
-`@script`
-
 
 
 ---
@@ -115,11 +90,11 @@ Don't repeat code! Reuse it!
 
 If code repeats in one file, we could define a function and use it throughout the file.
 
-Defining the same function in multiple scripts would be repetitive.
+Defining the same function in multiple code files would be repetitive.
 
-Instead, we will save our function definition in a Python code file called a module.
-
-Moving function definitions to modules -> smaller scripts.
+Instead, we will 
+- save our function definitions in `modules` and 
+- use the definitions in `scripts`.
 
 
 `@script`
@@ -135,16 +110,17 @@ key: "ae33b5d1d6"
 ```
 
 `@part1`
-Modules allow us to avoid code repetition, by making class and function definitions available throughout a project.
+Scripts and modules
+- are plain-text files that
+- have `.py` extensions and
+- contain only Python code.
 
-We can use the `import` statement to make the function definition available in each file that needs it.
+Scripts and modules differ in how and why they are used. 
 
-Scripts and modules are similar in many ways, but differ in how and why they are used. 
-
-| Action | Filetype | Goal                            |
-|--------|----------|---------------------------------|
-| Run    | Script   | Do things, e.g. create a plot   |
-| Import | Module   | Define classes and/or functions |
+| Verb   | Filetype | Goal             |
+|--------|----------|------------------|
+| Run    | Script   | Perform actions  |
+| Import | Module   | Provide tools    |
 
 
 `@script`
@@ -160,6 +136,35 @@ if __name__ == '__main__':
 
 
 ---
+## Running Scripts
+
+```yaml
+type: "FullSlide"
+key: "4de73bc2a6"
+```
+
+`@part1`
+Scripts in data science projects are typically run in a particular order.
+
+This order can be visualized as a diagram called a directed acyclic graph (DAG). 
+
+![](https://ndownloader.figshare.com/files/13168322/preview/13168322/preview.jpg)
+
+1. Create a script named `greet.py`:
+```python
+print("Hello World!")
+```
+2. Run the script in a shell:
+```bash
+python greet.py
+```
+
+
+`@script`
+
+
+
+---
 ## Importing modules
 
 ```yaml
@@ -168,17 +173,16 @@ key: "919381ac3b"
 ```
 
 `@part1`
-Inside of a directory called `my_project`, create 2 Python code files:
-
-1. A module named `say.py`, which uses the `def` statement to define a function called `hello`:
+1. Create a module named `say.py`, which uses the `def` statement to define a function called `hello`:
 ```python
 def hello():
-    print("Hello World!")
+       print("Hello World!")
 ```
 
-2. A script named `greet.py`, which uses the `import` statement to import the `say` module:
+2. Edit the `greet.py` script to import the `say` module and call the `hello` function:
 ```python
 import say
+say.hello()
 ```
 
 
