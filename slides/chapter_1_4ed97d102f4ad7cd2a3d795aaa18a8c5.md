@@ -113,13 +113,13 @@ While working on a project, you may notice common patterns.
 
 Don't repeat code! Reuse it!
 
-In a monolithic file, we could define a function and use it throughout the file.
+If code repeats in one file, we could define a function and use it throughout the file.
 
 Defining the same function in multiple scripts would be repetitive.
 
 Instead, we will save our function definition in a Python code file called a module.
 
-Moving function definitions to modules -> smaller scripts
+Moving function definitions to modules -> smaller scripts.
 
 
 `@script`
@@ -231,7 +231,7 @@ Add the code below to `say.py`
 if __name__ == '__main__':
     hello()
 ```
-Now running `say.py` using a shell or IPython will also print "Hello World".
+Now running `say.py` in a shell will also print "Hello World".
 
 The difference is that we can import the `hello` function from `say.py`, but not `greet.py`.
 
@@ -259,11 +259,14 @@ key: "bfeb750a7e"
 ```
 
 `@part1`
-Running an entire project
-
-1. Rename  a `__main__.py` file in a directory called `my_project`
-2. Include code in the file, e.g. `print("This is my project!")`
-3. Run `python my_project`
+1. Rename `say.py` as `__main__.py` 
+2. Go up one level in your folder system and 
+3. run `my_project`
+```bash
+mv say.py __main__.py
+cd ..
+python my_project
+```
 
 Some advantages of this are:
 You can zip the whole project and still run `__main__.py`
