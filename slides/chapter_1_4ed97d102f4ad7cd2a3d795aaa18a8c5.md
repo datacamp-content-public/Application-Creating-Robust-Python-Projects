@@ -168,20 +168,18 @@ key: "919381ac3b"
 ```
 
 `@part1`
-1. Create a file called `say.py`
+Inside of a directory called `my_project`, create 2 Python code files:
+
+1. A module named `say.py`, which uses the `def` statement to define a function called `hello`:
 ```python
 def hello():
-       print("Hello World!")
-```
-2. In a separate file called `greet.py`, import `say`
-```python
-import say
-say.hello()
+    print("Hello World!")
 ```
 
-In the example above, 
-- `say.py` is a module and
-- `greet.py` is a script that imports the `say` module
+2. A script named `greet.py`, which uses the `import` statement to import the `say` module:
+```python
+import say
+```
 
 
 `@script`
@@ -197,19 +195,20 @@ key: "d28e7b40dc"
 ```
 
 `@part1`
-You can run the `greet.py` script in a shell,
-```sh
+Right now, running `greet.py` will have no effect. 
+
+To print "Hello World",
+
+1. Add a function call to `greet.py`:
+```python
+import say
+say.hello
+```
+
+2. Run the `greet.py` script in a shell: 
+```bash
 python greet.py
 ```
-
-or an IPython console / a Jupyter notebook.
-```python
-%run greet.py
-```
-
-This will 
-1. import the `say` module and then 
-2. call its `hello` function to `print` "Hello World!"
 
 
 `@script`
@@ -234,6 +233,8 @@ if __name__ == '__main__':
 ```
 Now running `say.py` using a shell or IPython will also print "Hello World".
 
+The difference is that we can import the `hello` function from `say.py`, but not `greet.py`.
+
 This approach works best when we only want to call one function from a module.
 
 
@@ -250,23 +251,6 @@ if __name__ == '__main__':
 
 
 ---
-## Importing modules
-
-```yaml
-type: "FullSlide"
-key: "ab730708e1"
-center_content: false
-```
-
-`@part1`
-
-
-
-`@script`
-The Python programming language has a [Batteries Included Philosophy](https://www.python.org/dev/peps/pep-0206/#batteries-included-philosophy). This means that
-
-
----
 ## Running projects
 
 ```yaml
@@ -277,7 +261,7 @@ key: "bfeb750a7e"
 `@part1`
 Running an entire project
 
-1. Create a `__main__.py` file in a directory called `my_project`
+1. Rename  a `__main__.py` file in a directory called `my_project`
 2. Include code in the file, e.g. `print("This is my project!")`
 3. Run `python my_project`
 
