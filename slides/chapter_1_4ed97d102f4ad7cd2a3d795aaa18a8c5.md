@@ -244,7 +244,6 @@ def hello():
 import say
 say.hello()
 ```{{1}}
-3. Type `python greet.py` in a shell and press Enter. {{2}}
 
 
 `@script`
