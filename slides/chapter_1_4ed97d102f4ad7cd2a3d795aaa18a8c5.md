@@ -117,10 +117,10 @@ Scripts and modules
 
 Scripts and modules differ in how and why they are used. 
 
-| Verb   | Filetype | Goal             |
-|--------|----------|------------------|
-| Run    | Script   | Perform actions  |
-| Import | Module   | Provide tools    |
+| Verb   | Filetype | Goal              |
+|--------|----------|-------------------|
+| Run    | Script   | Perform actions   |
+| Import | Module   | Define functions  |
 
 
 `@script`
