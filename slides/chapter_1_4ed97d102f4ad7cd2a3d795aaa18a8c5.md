@@ -202,16 +202,17 @@ key: "4b698e100b"
 `@part1`
 It is possible for the same file to be used as both a module and a script.
 
-Add the code below to `say.py`:
+To demonstrate this, add the code below to the end of `say.py`:
 ```python
 if __name__ == '__main__':
     hello()
 ```
-Now running `say.py` in a shell will print "Hello World!", just like running `greet.py`.
 
-The difference is that we can import the `hello` function from `say.py`, but not `greet.py`.
+This change enables `say.py` to print `Hello World!` without affecting the import in `greet.py`.
 
-When we only want to call one function from a module, Running modules as scripts works best .
+The `if` statement above prevents the `hello` function from being called every time `say` is imported.
+
+Without it, running `greet.py` would print `Hello World!` twice!
 
 
 `@script`
@@ -247,7 +248,7 @@ mv __main__.py my_project
 python my_project
 ```
 
-You can zip the whole project and run it:
+You can zip the whole project and run zip file:
 ```bash
 python -m zipfile -c my_project.zip my_project/*
 python my_project.zip
