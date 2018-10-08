@@ -154,7 +154,7 @@ Each script
 - handles one and only one step in the process
 - imports the tools it needs from modules that are included in the project.
 
-It is common to run scripts in a shell like Bash (Bourne again shell).
+It is common to run scripts in a shell, for example Bash (Bourne again shell).
 
 
 `@script`
