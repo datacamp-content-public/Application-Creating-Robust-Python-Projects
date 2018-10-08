@@ -301,12 +301,11 @@ In addition to running a module as a script, we can also run an entire project.
 This requires that the project contain a top-level script called `__main__.py`.
 
 The `__main__.py` script can 
-- run all of the code in the project simply importing each script and 
-- accept input from the user.
+- execute all of the code in the project simply by importing each script,
+- accept input from the user, and
+- work even if the project is turned into a zip file, e.g. `my_project.zip`.
 
-This will work even if the project is turned into a zip file, e.g. `my_project.zip`.
-
-This is a great example of how we can enjoy the convenience of including everything in a single file without sacrificing modularity!
+A great example of how we can enjoy the convenience of including everything in a single file without sacrificing modularity!
 
 
 `@script`
