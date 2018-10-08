@@ -149,7 +149,7 @@ Scripts in data science projects are typically run in a particular order.
 
 This order can be visualized as a diagram called a directed acyclic graph (DAG). {{1}}
 
-![](https://ndownloader.figshare.com/files/13168322/preview/13168322/preview.jpg) {{1}}
+![](https://assets.datacamp.com/production/repositories/3687/datasets/3d4fdb37d0924a05ab75fcc786dc590b33dbbf4b/simple_dag.png) {{1}}
 
 Each script {{2}}
 - handles one and only one step in the process {{2}}
@@ -235,10 +235,10 @@ key: "bfeb750a7e"
 ```
 
 `@part1`
-1. Create a directory called `my_project`
-2. Make a copy of `say.py` called `__main__.py` 
-3. Move `__main__.py` into `my_project`
-4. Run the project
+1. Make a directory (`mkdir`) called `my_project`
+2. Create a copy (`cp`) of `say.py` called `__main__.py` 
+3. Move (`mv`) `__main__.py` into `my_project`
+4. Run the project like you would run a script
 
 ```bash
 mkdir my_project
