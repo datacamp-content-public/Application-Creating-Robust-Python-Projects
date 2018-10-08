@@ -298,14 +298,14 @@ key: "bfeb750a7e"
 `@part1`
 In addition to running a module as a script, we can also run an entire project.
 
-This requires that the project contain a top-level script called `__main__.py`.
+This requires that the project contain a top-level script called `__main__.py`. {{1}}
 
-The `__main__.py` script can 
-- execute all of the code in the project simply by importing each script,
-- accept input from the user, and
-- work even if the project is turned into a zip file, e.g. `my_project.zip`.
+The `__main__.py` script can  {{2}}
+- execute all of the code in the project simply by importing each script, {{2}}
+- accept input from the user, and {{2}}
+- work even if the project is turned into a zip file, e.g. `my_project.zip`. {{2}}
 
-A great example of how we can enjoy the convenience of including everything in a single file without sacrificing modularity!
+A great example of how we can enjoy the convenience of including everything in a single file without sacrificing modularity! {{3}}
 
 
 `@script`
