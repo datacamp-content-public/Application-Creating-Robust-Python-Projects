@@ -59,7 +59,7 @@ key: "849662964a"
 `@part1`
 A project is a directory that contains project files.
 
-An exercise in empathy for users of your code (including your future self!) {{1}}
+Also, an opportunity to exercise empathy for anyone who might use your code (including your future self!) {{1}}
 
 Project files may be organized into subdirectories or kept at the top-level.{{2}}
 
@@ -92,7 +92,7 @@ disable_transition: true
 `@part1`
 A project is a directory that contains project files.
 
-An exercise in empathy for users of your code (including your future self!)
+Also, an opportunity to exercise empathy for anyone who might use your code (including your future self!)
 
 Project files may be organized into subdirectories or kept at the top-level.
 
@@ -123,7 +123,7 @@ key: "d00704249b"
 `@part1`
 The opposite of modular is monolithic.
 
-A monolithic file could, for example, contain all project {{1}}
+A monolithic file, like `analysis.ipynb`, could contain all project {{1}}
 - code, {{1}}
 - documentation, and {{1}}
 - output. {{1}}
