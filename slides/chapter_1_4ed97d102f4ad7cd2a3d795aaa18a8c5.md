@@ -233,7 +233,7 @@ key: "919381ac3b"
 ```
 
 `@part1`
-1. Create a module named `say.py`, which uses the `def` statement to define a function called `hello`:
+1. Create a module named `say.py`, which uses the `def` statement to define a function called `hello` that prints `Hello World!` without accepting any input:
 ```python
 def hello():
        print("Hello World!")
@@ -270,7 +270,7 @@ if __name__ == '__main__':
 
 The code above calls the `hello` function only when `say` is run as a script. {{2}}
 
-The `if` statement prevents `hello` from being called when `say` is imported as a module. {{3}}
+The `if` statement prevents `hello` from being called when `say` is imported. {{3}}
 
 Adding `hello()` to `say.py` without the `if` statement, would make `greet.py` print `Hello World!` twice!. {{4}}
 
@@ -296,15 +296,17 @@ key: "bfeb750a7e"
 ```
 
 `@part1`
-In addition to running a module as script, we can also run an entire project.
+In addition to running a module as a script, we can also run an entire project.
 
-This requires that a project contain a top-level script called `__main__.py`.
+This requires that the project contain a top-level script called `__main__.py`.
 
-We can run `__main__.py` by passing the project name to the `python` command in an interface called a command-line interpreter or shell.
+The `__main__.py` script can import all of the modules in the project, generate output, and even accept input from the user.
 
-This will still work even if we zip up the whole project and then pass the name of the zip file to the `python` command:
+We can run `__main__.py` by passing the project name to the `python` command in an interface called a shell.
 
-The convenience of a single file without sacrificing modularity!
+This will still work even if the project is turned into a zip file, e.g. `my_project.zip`.
+
+This is a great example of how we can enjoy the convenience of including everything in a single file without sacrificing modularity!
 
 
 `@script`
