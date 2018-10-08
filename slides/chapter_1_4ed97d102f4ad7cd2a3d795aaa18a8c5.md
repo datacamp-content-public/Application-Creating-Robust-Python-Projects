@@ -179,7 +179,7 @@ Modules and scripts
 
 Modules and scripts differ in how and why they are used.{{1}}
 
-| Filetype | Use    | Action           |
+| Filetype |  How?  |       Why?       |
 |:--------:|:------:|:----------------:|
 | Module   | Import | Define functions |
 | Script   | Run    | Call functions   |
