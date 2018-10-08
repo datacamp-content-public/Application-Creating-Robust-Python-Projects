@@ -130,7 +130,7 @@ A monolithic file, like `analysis.ipynb`, could contain all project {{1}}
 
 To get the benefits of modularity and the convenience of a single file: {{2}}
 1. start with small files and then {{2}}
-2. create a separate, larger file later. {{2}}
+2. create a separate larger file later. {{2}}
 
 
 `@script`
@@ -156,7 +156,7 @@ One way to avoid code repetition is to {{2}}
 
 To further improve the modularity and reusability of our code, we will {{3}}
 - define functions in `modules` and {{3}}
-- use the functions in `scripts`. {{3}}
+- call the functions in `scripts`. {{3}}
 
 
 `@script`
@@ -164,7 +164,7 @@ To further improve the modularity and reusability of our code, we will {{3}}
 
 
 ---
-## Scripts versus modules
+## Modules versus Scripts
 
 ```yaml
 type: "FullSlide"
@@ -172,17 +172,17 @@ key: "ae33b5d1d6"
 ```
 
 `@part1`
-Scripts and modules
+Modules and scripts
 - are plain-text files that
 - have `.py` extensions and
 - contain only Python code.
 
-Scripts and modules differ in how and why they are used.{{1}}
+Modules and scripts differ in how and why they are used.{{1}}
 
 | Filetype | Verb   | Goal             |
 |----------|--------|------------------|
-| Script   | Run    | Perform actions  |
-| Module   | Import | Define objects   |
+| Module   | Import | Define functions |
+| Script   | Run    | Call functions   |
 {{1}}
 
 
@@ -196,6 +196,32 @@ def say_hi():
 if __name__ == '__main__':
     say_hi()
 ```
+
+
+---
+## Importing Modules
+
+```yaml
+type: "FullSlide"
+key: "919381ac3b"
+```
+
+`@part1`
+1. Create a module named `say.py`, which uses the `def` statement to define a function called `hello` that prints `Hello World!` without accepting any input:
+```python
+def hello():
+       print("Hello World!")
+```
+
+2. Create a script called `greet.py`, which imports the `say` module and calls the `hello` function:{{1}}
+```python
+import say
+say.hello()
+```{{1}}
+
+
+`@script`
+
 
 
 ---
@@ -225,33 +251,7 @@ It is common to run scripts in a shell, for example Bash (Bourne again shell). {
 
 
 ---
-## Importing modules
-
-```yaml
-type: "FullSlide"
-key: "919381ac3b"
-```
-
-`@part1`
-1. Create a module named `say.py`, which uses the `def` statement to define a function called `hello` that prints `Hello World!` without accepting any input:
-```python
-def hello():
-       print("Hello World!")
-```
-
-2. Create a script called `greet.py`, which imports the `say` module and calls the `hello` function:{{1}}
-```python
-import say
-say.hello()
-```{{1}}
-
-
-`@script`
-
-
-
----
-## Running modules as scripts
+## Running Modules as Scripts
 
 ```yaml
 type: "FullSlide"
