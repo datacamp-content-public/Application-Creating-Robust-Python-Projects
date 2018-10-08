@@ -117,10 +117,10 @@ Scripts and modules
 
 Scripts and modules differ in how and why they are used. 
 
-| Verb   | Filetype | Goal              |
-|--------|----------|-------------------|
-| Run    | Script   | Perform actions   |
-| Import | Module   | Define functions  |
+| Verb   | Filetype | Goal             |
+|--------|----------|------------------|
+| Run    | Script   | Perform actions  |
+| Import | Module   | Define objects   |
 
 
 `@script`
@@ -150,14 +150,11 @@ This order can be visualized as a diagram called a directed acyclic graph (DAG).
 
 ![](https://ndownloader.figshare.com/files/13168322/preview/13168322/preview.jpg)
 
-1. Create a script named `greet.py`:
-```python
-print("Hello World!")
-```
-2. Run the script in a shell:
-```bash
-python greet.py
-```
+Each script
+- handles one and only one step in the process
+- imports the tools it needs from modules that are included in the project.
+
+It is common to run scripts in a shell like Bash (Bourne again shell).
 
 
 `@script`
@@ -179,12 +176,12 @@ def hello():
        print("Hello World!")
 ```
 
-2. Edit the `greet.py` script to import the `say` module and call the `hello` function:
+2. Create a script called `greet.py`, which imports the `say` module and calls the `hello` function:
 ```python
 import say
 say.hello()
 ```
-3. Run the `greet.py` script in a shell as before.
+3. Type `python greet.py` in a shell and press Enter.
 
 
 `@script`
@@ -208,11 +205,11 @@ if __name__ == '__main__':
     hello()
 ```
 
-This change enables `say.py` to print `Hello World!` without affecting the import in `greet.py`.
+The code above calls the `hello` function only when `say` is run as a script. 
 
-The `if` statement above prevents the `hello` function from being called every time `say` is imported.
+The `if` statement prevents `hello` from being called when `say` is imported as a module.
 
-Without it, running `greet.py` would print `Hello World!` twice!
+Adding `hello()` to `say.py` without the `if` statement, would make `greet.py` print `Hello World!` twice!.
 
 
 `@script`
