@@ -270,7 +270,7 @@ Later in the course we will learn other ways to distribute Python code.
 
 
 ---
-## Final Slide
+## Let's practice running scripts and importing modules!
 
 ```yaml
 type: "FinalSlide"
