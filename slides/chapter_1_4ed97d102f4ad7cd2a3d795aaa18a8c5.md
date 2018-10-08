@@ -130,7 +130,7 @@ A monolithic file, like `analysis.ipynb`, could contain all project {{1}}
 
 To get the benefits of modularity and the convenience of a single file: {{2}}
 1. start with small files and then {{2}}
-2. combine them into a larger file later on. {{2}}
+2. create a separate, larger file later. {{2}}
 
 
 `@script`
