@@ -66,7 +66,7 @@ A monolithic file could, for example, contain all project
 - documentation, and
 - output.
 
-The benefits of modularity with the convenience of a single file:
+To get the benefits of modularity and the convenience of a single file:
 1. start with small files and then
 2. combine them into a larger file later on.
 
@@ -248,7 +248,7 @@ mv __main__.py my_project
 python my_project
 ```
 
-You can zip the whole project and run zip file:
+You can zip the whole project and then run the zip file:
 ```bash
 python -m zipfile -c my_project.zip my_project/*
 python my_project.zip
