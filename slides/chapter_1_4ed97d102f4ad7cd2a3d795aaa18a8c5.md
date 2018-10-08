@@ -31,14 +31,14 @@ key: "867f3e4a7b"
 `@part1`
 A project is a directory that contains project files.
 
-Learning Goal: Establish principles to follow for all projects
+Learning Goal: Establish principles to follow for all projects {{2}}
 
-Following the Modularity and Reusability Principles makes code easier to 
-- read,
-- organize, 
-- maintain, 
-- debug, and
-- test.
+Following the Modularity and Reusability Principles makes code easier to {{3}}
+- read, {{3}}
+- organize, {{3}}
+- maintain, {{3}}
+- debug, and {{3}}
+- test. {{3}}
 
 
 `@script`
@@ -61,14 +61,14 @@ key: "d00704249b"
 `@part1`
 The opposite of modular is monolithic.
 
-A monolithic file could, for example, contain all project
-- code,
-- documentation, and
-- output.
+A monolithic file could, for example, contain all project {{1}}
+- code, {{1}}
+- documentation, and {{1}}
+- output. {{1}}
 
-To get the benefits of modularity and the convenience of a single file:
-1. start with small files and then
-2. combine them into a larger file later on.
+To get the benefits of modularity and the convenience of a single file: {{2}}
+1. start with small files and then {{2}}
+2. combine them into a larger file later on. {{2}}
 
 
 `@script`
@@ -86,15 +86,15 @@ key: "ffe2e848d0"
 `@part1`
 While working on a project, you may notice common patterns.
 
-Don't repeat code! Reuse it!
+Don't repeat code! Reuse it! {{1}}
 
-One way to deal with code repetition is to define a function.
+One way to avoid code repetition is to define a function. {{2}}
 
-Defining the same function in multiple code files would be repetitive.
+Defining the same function in multiple code files would be repetitive. {{2}}
 
-Instead, we will 
-- save our function definitions in `modules` and 
-- use the definitions in `scripts`.
+Instead, we will {{3}}
+- save our function definitions in `modules` and {{3}}
+- use the definitions in `scripts`. {{3}}
 
 
 `@script`
@@ -115,12 +115,13 @@ Scripts and modules
 - have `.py` extensions and
 - contain only Python code.
 
-Scripts and modules differ in how and why they are used. 
+Scripts and modules differ in how and why they are used.{{1}}
 
-| Verb   | Filetype | Goal             |
-|--------|----------|------------------|
-| Run    | Script   | Perform actions  |
-| Import | Module   | Define objects   |
+| Filetype | Verb   | Goal             |
+|----------|--------|------------------|
+| Script   | Run    | Perform actions  |
+| Module   | Import | Define objects   |
+{{1}}
 
 
 `@script`
@@ -146,15 +147,15 @@ key: "4de73bc2a6"
 `@part1`
 Scripts in data science projects are typically run in a particular order.
 
-This order can be visualized as a diagram called a directed acyclic graph (DAG). 
+This order can be visualized as a diagram called a directed acyclic graph (DAG). {{1}}
 
-![](https://ndownloader.figshare.com/files/13168322/preview/13168322/preview.jpg)
+![](https://ndownloader.figshare.com/files/13168322/preview/13168322/preview.jpg) {{1}}
 
-Each script
-- handles one and only one step in the process
-- imports the tools it needs from modules that are included in the project.
+Each script {{2}}
+- handles one and only one step in the process {{2}}
+- imports the tools it needs from modules that are included in the project. {{2}}
 
-It is common to run scripts in a shell, for example Bash (Bourne again shell).
+It is common to run scripts in a shell, for example Bash (Bourne again shell). {{2}}
 
 
 `@script`
@@ -176,12 +177,12 @@ def hello():
        print("Hello World!")
 ```
 
-2. Create a script called `greet.py`, which imports the `say` module and calls the `hello` function:
+2. Create a script called `greet.py`, which imports the `say` module and calls the `hello` function:{{1}}
 ```python
 import say
 say.hello()
-```
-3. Type `python greet.py` in a shell and press Enter.
+```{{1}}
+3. Type `python greet.py` in a shell and press Enter. {{2}}
 
 
 `@script`
@@ -199,17 +200,18 @@ key: "4b698e100b"
 `@part1`
 It is possible for the same file to be used as both a module and a script.
 
-To demonstrate this, add the code below to the end of `say.py`:
+To demonstrate this, add the code below to the end of `say.py`: {{1}}
 ```python
 if __name__ == '__main__':
     hello()
 ```
+{{1}}
 
-The code above calls the `hello` function only when `say` is run as a script. 
+The code above calls the `hello` function only when `say` is run as a script. {{2}}
 
-The `if` statement prevents `hello` from being called when `say` is imported as a module.
+The `if` statement prevents `hello` from being called when `say` is imported as a module. {{3}}
 
-Adding `hello()` to `say.py` without the `if` statement, would make `greet.py` print `Hello World!` twice!.
+Adding `hello()` to `say.py` without the `if` statement, would make `greet.py` print `Hello World!` twice!. {{4}}
 
 
 `@script`
@@ -243,13 +245,13 @@ mkdir my_project
 cp say.py __main__.py
 mv __main__.py my_project
 python my_project
-```
-
+```{{1}}
 You can zip the whole project and then run the zip file:
+{{2}}
 ```bash
 python -m zipfile -c my_project.zip my_project/*
 python my_project.zip
-```
+```{{2}}
 
 
 `@script`
