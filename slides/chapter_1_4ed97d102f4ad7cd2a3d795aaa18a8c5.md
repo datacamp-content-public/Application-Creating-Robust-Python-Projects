@@ -30,7 +30,7 @@ key: "867f3e4a7b"
 
 `@part1`
 Learning Objectives: 
-- Establish principles and best practices for working on Python projects.{{1}}
+- Follow principles and best practices for working on Python projects.{{1}}
 - Use helpful technologies and techniques to save time and get better results!{{2}}
 - Write Python code and documentation that is organized and easy to {{3}}
     - read, {{3}}
@@ -150,12 +150,12 @@ While working on a project, you may notice common patterns.
 
 Reusability Principle: Don't repeat code! Reuse it! {{1}}
 
-One way to avoid code repetition is to define a function. {{2}}
+One way to avoid code repetition is to {{2}}
+- define a block of reusable code called a function, and {{2}}
+- replace the repetitive code with function calls. {{2}}
 
-Defining the same function in multiple code files would be repetitive. {{2}}
-
-Instead, we will {{3}}
-- define our functions in `modules` and {{3}}
+To further improve the modularity and reusability of our code, we will {{3}}
+- define functions in `modules` and {{3}}
 - use the functions in `scripts`. {{3}}
 
 
@@ -217,7 +217,7 @@ Each script {{2}}
 - handles one and only one step in the process {{2}}
 - imports the tools it needs from modules that are included in the project. {{2}}
 
-It is common to run scripts in a shell, for example Bash (Bourne again shell). {{2}}
+It is common to run scripts in a shell, for example Bash (Bourne again shell). {{3}}
 
 
 `@script`
