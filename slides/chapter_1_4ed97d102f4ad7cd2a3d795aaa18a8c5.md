@@ -21,7 +21,7 @@ title: Co-Chair, Foundation for Advanced Education in the Sciences (FAES)
 
 
 ---
-## Modularity and Reusability
+## What will you learn?
 
 ```yaml
 type: "FullSlide"
@@ -29,16 +29,14 @@ key: "867f3e4a7b"
 ```
 
 `@part1`
-A project is a directory that contains project files.
-
-Learning Goal: Establish principles to follow for all projects {{2}}
-
-Following the Modularity and Reusability Principles makes code easier to {{3}}
-- read, {{3}}
-- organize, {{3}}
-- maintain, {{3}}
-- debug, and {{3}}
-- test. {{3}}
+Learning Objectives: 
+- Establish principles and best practices for working on Python projects.{{1}}
+- Use helpful technologies and techniques to save time and get better results!{{2}}
+- Write Python code and documentation that is organized and easy to {{3}}
+    - read, {{3}}
+    - use, {{3}}
+    - maintain, and {{3}}
+    - share. {{3}}
 
 
 `@script`
@@ -48,6 +46,70 @@ Project deliverables may be
 - a document describing an analysis,
 - a web app that enables exploration of a dataset,
 - a program that allows runs
+
+
+---
+## What is a Project?
+
+```yaml
+type: "FullSlide"
+key: "849662964a"
+```
+
+`@part1`
+A project is a directory that contains project files.
+
+An exercise in empathy for users of your code (including your future self!) {{1}}
+
+Project files may be organized into subdirectories or kept at the top-level.{{2}}
+
+```
+my_project
+├── LICENSE
+├── README.md
+├── code
+│   └── analysis.ipynb
+└── requirements.txt
+```{{3}}
+
+First Python Project Principle: Modularity 
+{{4}}
+
+
+`@script`
+
+
+
+---
+## What is a Project?
+
+```yaml
+type: "FullSlide"
+key: "d238684b3c"
+disable_transition: true
+```
+
+`@part1`
+A project is a directory that contains project files.
+
+An exercise in empathy for users of your code (including your future self!)
+
+Project files may be organized into subdirectories or kept at the top-level.
+
+```
+my_project
+├── LICENSE
+├── README.md
+├── code
+│   └── analysis.ipynb   <= Not modular!
+└── requirements.txt
+```
+
+First Python Project Principle: Modularity
+
+
+`@script`
+
 
 
 ---
@@ -86,15 +148,15 @@ key: "ffe2e848d0"
 `@part1`
 While working on a project, you may notice common patterns.
 
-Don't repeat code! Reuse it! {{1}}
+Reusability Principle: Don't repeat code! Reuse it! {{1}}
 
 One way to avoid code repetition is to define a function. {{2}}
 
 Defining the same function in multiple code files would be repetitive. {{2}}
 
 Instead, we will {{3}}
-- save our function definitions in `modules` and {{3}}
-- use the definitions in `scripts`. {{3}}
+- define our functions in `modules` and {{3}}
+- use the functions in `scripts`. {{3}}
 
 
 `@script`
