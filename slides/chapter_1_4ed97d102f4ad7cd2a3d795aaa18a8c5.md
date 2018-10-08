@@ -217,11 +217,11 @@ Each script {{2}}
 - handles one and only one step in the process {{2}}
 - imports the tools it needs from modules that are included in the project. {{2}}
 
-It is common to run scripts in a shell, for example Bash (Bourne again shell). {{3}}
-
 
 `@script`
+It is common to run scripts in a shell, for example Bash (Bourne again shell). {{3}}
 
+3. Type `python greet.py` in a shell and press Enter. {{2}}
 
 
 ---
@@ -296,26 +296,19 @@ key: "bfeb750a7e"
 ```
 
 `@part1`
-1. Make a directory (`mkdir`) called `my_project`
-2. Create a copy (`cp`) of `say.py` called `__main__.py` 
-3. Move (`mv`) `__main__.py` into `my_project`
-4. Run the project like you would run a script
+In addition to running a module as script, we can also run an entire project.
 
-```bash
-mkdir my_project
-cp say.py __main__.py
-mv __main__.py my_project
-python my_project
-```{{1}}
-You can zip the whole project and then run the zip file:
-{{2}}
-```bash
-python -m zipfile -c my_project.zip my_project/*
-python my_project.zip
-```{{2}}
+This requires that a project contain a top-level script called `__main__.py`.
+
+We can run `__main__.py` by passing the project name to the `python` command in an interface called a command-line interpreter or shell.
+
+This will still work even if we zip up the whole project and then pass the name of the zip file to the `python` command:
+
+The convenience of a single file without sacrificing modularity!
 
 
 `@script`
+such as Bash (Bourne again shell). {{3}}
 Running an entire project
 
 1. Create a `__main__.py` file in a directory called `my_project`
