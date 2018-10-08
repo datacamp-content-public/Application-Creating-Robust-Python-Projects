@@ -207,11 +207,11 @@ Add the code below to `say.py`:
 if __name__ == '__main__':
     hello()
 ```
-Now running `say.py` in a shell will also print "Hello World!".
+Now running `say.py` in a shell will print "Hello World!", just like running `greet.py`.
 
 The difference is that we can import the `hello` function from `say.py`, but not `greet.py`.
 
-This approach works when we only want to call one function from a module.
+When we only want to call one function from a module, Running modules as scripts works best .
 
 
 `@script`
