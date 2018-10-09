@@ -342,8 +342,14 @@ A great example of how we can enjoy the {{3}}
 `@script`
 The script that uses the import statement to execute all of the other scripts in a project should be at the top level and will be most useful if it is named __main__.py.
 Double underscores around Python names are pronounced dunder.
-This indicates that the name is special and has some superpowers. 
-In the case of __main__.py, the main superpower is that this script can be executed from outside a project using the project name. This will work even if
+The double underscores indicate that the name is special.
+Python objects that have such names usually have some superpowers. 
+In the case of __main__.py, the main superpower is that
+it can be executed from outside of a project using the project name.
+This will work even if the project is zipped!
+
+The ability to run a zipped project is a great example of
+enjoying the convenience of a single file without sacrificing modularity!
 
 
 ---
