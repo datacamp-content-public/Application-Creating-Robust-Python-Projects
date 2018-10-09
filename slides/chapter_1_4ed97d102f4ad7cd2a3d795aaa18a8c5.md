@@ -82,7 +82,8 @@ practice empathy for people who might want to use your code.
 Time spent on crafting a good project is an investment in the future.
 
 Project files can be in subdirectories or in the top-level directory.
-In this example, all of the files are at the top level except for analysis.ipynb, which is in the "code" subdirectory.
+In this example, all of the files are at the top level
+except for analysis.ipynb, which is in the "code" subdirectory.
 This brings us to our first Python Project Principle: Modularity.
 
 
@@ -175,11 +176,15 @@ To further improve the modularity and reusability of our code, we will {{3}}
 
 
 `@script`
-If you begin to notice patterns in the code, it is time to start thinking about the next Python Project Principle: Reusability.
+If you begin to notice patterns in the code,
+it is time to start thinking about the next Python Project Principle: Reusability.
 According to the Reusability Principle, you should reuse code instead of repeating it. 
 To avoid code repetition, you will need to use functions.
-Functions are reusable blocks of code that can be defined once and then called as many times as needed to get the job done.
-To take our use of functions to the next level, we will define functions in files called modules and then call the functions in files called scripts.
+Functions are reusable blocks of code that can be defined once
+and then called as many times as needed to get the job done.
+To take our use of functions to the next level,
+we will define functions in files called modules
+and then call the functions in files called scripts.
 
 
 ---
@@ -269,9 +274,13 @@ Running `greet` would print "Hello World!" twice: once when `say` is imported an
 `@script`
 A Python code file can be used as both a module and a script.
 
-To make a module/script hybrid we need to use an if statement that calls a function only when the file is run as a script and not when it is imported as a module. 
+To make a module/script hybrid we need to use an if statement
+that calls a function only when the file is run as a script
+and not when it is imported as a module. 
 
-In the example of the say module and greet script, this if statement allows say to print "Hello World!" when it is run, but also keeps the hello function from being called when say is imported.
+In the example of the say module and greet script,
+this if statement allows say to print "Hello World!" when it is run,
+but also keeps the hello function from being called when say is imported.
 
 What if we added the function call to say without the if statement? 
 In that case, running greet would print "Hello World!" twice:
@@ -314,7 +323,8 @@ Instead, you could write a script to run all of the other scripts in the project
 A clever way to do this is to use the import statement.
 You can import one script per line or include all of the scripts on one line separated by commas.
 
-I think it's worth repeating: Python code files, regardless of whether they are modules or scripts, are executed immediately upon import.
+I think it's worth repeating:
+Python code files, regardless of whether they are modules or scripts, are executed immediately upon import.
 
 
 ---
@@ -340,7 +350,8 @@ A great example of how we can enjoy the {{3}}
 
 
 `@script`
-The script that uses the import statement to execute all of the other scripts in a project should be at the top level and will be most useful if it is named __main__.py.
+The script that uses the import statement to execute all of the other scripts in a project
+should be at the top level and will be most useful if it is named __main__.py.
 Double underscores around Python names are pronounced dunder.
 The double underscores indicate that the name is special.
 Python objects that have such names usually have some superpowers. 
