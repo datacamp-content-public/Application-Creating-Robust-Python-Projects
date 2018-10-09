@@ -274,6 +274,8 @@ What if we added the function call to say without the if statement?
 In that case, running greet would print "Hello World!" twice:
 The first time when say is imported and then again when greet calls the hello function.
 
+Python code files, regardless of whether they are modules or scripts, are executed immediately upon import.
+
 
 ---
 ## Running Scripts
