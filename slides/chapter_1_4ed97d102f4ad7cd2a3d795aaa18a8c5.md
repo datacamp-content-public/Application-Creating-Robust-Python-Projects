@@ -225,32 +225,6 @@ say.hello()
 
 
 ---
-## Running Scripts
-
-```yaml
-type: "FullSlide"
-key: "4de73bc2a6"
-```
-
-`@part1`
-Scripts in data science projects are typically run in a particular order.
-
-This order can be visualized as a diagram called a directed acyclic graph (DAG). {{1}}
-
-![](https://assets.datacamp.com/production/repositories/3687/datasets/3d4fdb37d0924a05ab75fcc786dc590b33dbbf4b/simple_dag.png) {{1}}
-
-Each script {{2}}
-- handles one and only one step in the process {{2}}
-- imports the tools it needs from modules that are included in the project. {{2}}
-
-
-`@script`
-It is common to run scripts in a shell, for example Bash (Bourne again shell). {{3}}
-
-3. Type `python greet.py` in a shell and press Enter. {{2}}
-
-
----
 ## Running Modules as Scripts
 
 ```yaml
@@ -272,7 +246,7 @@ The code above calls the `hello` function only when `say` is run as a script. {{
 
 The `if` statement prevents `hello` from being called when `say` is imported. {{3}}
 
-Adding `hello()` to `say` without the `if` statement, would make `greet` print `Hello World!` twice, because modules and scripts are executed immediately upon import! {{4}}
+Adding `hello()` to `say` without the `if` statement, would make `greet` print `Hello World!` twice, because the `say` module is executed immediately upon import! {{4}}
 
 
 `@script`
@@ -285,6 +259,35 @@ def say_hi():
 if __name__ == '__main__':
     say_hi()
 ```
+
+
+---
+## Running Scripts
+
+```yaml
+type: "FullSlide"
+key: "4de73bc2a6"
+```
+
+`@part1`
+Scripts in data science projects are typically run in a particular order.
+
+This order can be visualized as a diagram called a directed acyclic graph (DAG): {{1}}
+
+![](https://assets.datacamp.com/production/repositories/3687/datasets/3d4fdb37d0924a05ab75fcc786dc590b33dbbf4b/simple_dag.png) {{1}}
+
+Each script handles one step in the process and imports the tools it needs from modules that are included in the project. {{2}}
+
+To run a series of scripts, use the `import` statement as in the example below.{{3}}
+```python
+import get_data, clean_data, fit_model, evaluate_model
+```{{3}}
+
+
+`@script`
+It is common to run scripts in a shell, for example Bash (Bourne again shell). {{3}}
+
+3. Type `python greet.py` in a shell and press Enter. {{2}}
 
 
 ---
@@ -301,7 +304,7 @@ In addition to running a module as a script, we can also run an entire project.
 This requires that the project contain a top-level script called `__main__.py`. {{1}}
 
 The `__main__.py` script can  {{2}}
-- execute all of the code in the project simply by importing each script, {{2}}
+- execute all of the code in the project by importing each script, {{2}}
 - accept input from the user, and {{2}}
 - work even if the project is turned into a zip file, e.g. `my_project.zip`. {{2}}
 
