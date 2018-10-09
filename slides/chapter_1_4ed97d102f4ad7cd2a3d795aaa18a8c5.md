@@ -17,7 +17,8 @@ title: Co-Chair, Foundation for Advanced Education in the Sciences (FAES)
 
 
 `@script`
-
+Welcome to the course!
+In this video, you will learn about Python Project Principles.
 
 
 ---
@@ -40,12 +41,10 @@ Learning Objectives:
 
 
 `@script`
-Project come in all shapes and sizes.
-
-Project deliverables may be
-- a document describing an analysis,
-- a web app that enables exploration of a dataset,
-- a program that allows runs
+In the Creating Robust Python Projects course overall,
+you will learn to follow principles and best practices,
+and to use helpful technologies and techniques
+for writing and editing Python code and documentation.
 
 
 ---
@@ -77,7 +76,17 @@ First Python Project Principle: Modularity
 
 
 `@script`
+A project is a folder with project files inside.
+I like to think of each project as a chance to
+practice empathy for people who might want to use your code.
+Time spent on crafting a good project is an investment in the future.
 
+Project files can be in subdirectories or in the top-level directory.
+In this example, all of the files are at the top level except for analysis.ipynb, which is in the "code" subdirectory.
+This brings us to our first Python Project Principle: Modularity.
+Analysis.ipynb is not in line with the Modularity Principle,
+because every step in the analysis is done by one file.
+A more modular approach would be to have one file for each step in the analysis.
 
 
 ---
