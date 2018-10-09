@@ -304,8 +304,7 @@ key: "bfeb750a7e"
 The `import` statement used to execute all of the scripts in a project should be in a top-level script called `__main__.py`.
 
 The `__main__.py` script can  {{2}}
-- be run outside of the project, {{2}}
-- accept input from the user, and {{2}}
+- be run from outside of the project using the project name {{2}}
 - work even if the project is turned into a zip file, e.g. `my_project.zip`. {{2}}
 
 A great example of how we can enjoy the convenience of including everything in a single file without sacrificing modularity! {{3}}
