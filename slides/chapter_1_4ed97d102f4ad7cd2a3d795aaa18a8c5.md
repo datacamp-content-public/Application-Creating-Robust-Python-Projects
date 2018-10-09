@@ -270,7 +270,7 @@ To make a module/script hybrid we need to use an if statement that calls a funct
 
 In the example of the say module and greet script, this if statement allows say to print "Hello World!" when it is run, but also keeps the hello function from being called twice when we run the greet script. 
 
-If  Once w
+This is because all code
 
 
 ---
