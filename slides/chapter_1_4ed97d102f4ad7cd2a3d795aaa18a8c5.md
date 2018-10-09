@@ -312,7 +312,9 @@ It can be tedious to run each script one after another.
 Your first instinct may be to combine the scripts into a monolithic file.
 Instead, you could write a script to run all of the other scripts in the project.
 A clever way to do this is to use the import statement.
-You can import one script per line or include all of the scripts one line separated by commas.
+You can import one script per line or include all of the scripts on one line separated by commas.
+
+I think it's worth repeating: Python code files, regardless of whether they are modules or scripts, are executed immediately upon import.
 
 
 ---
@@ -324,18 +326,20 @@ key: "bfeb750a7e"
 ```
 
 `@part1`
-The `import` statement used to execute all of the scripts in a project would be most useful in a top-level script called `__main__.py`.
+Code that runs scripts is most useful in a top-level script called `__main__.py`.
 
 The `__main__.py` script can  {{2}}
-- be run from outside of the project using the project name {{2}}
+- be executed from outside of the project using the project name {{2}}
 - work even if the project is turned into a zip file, e.g. `my_project.zip`. {{2}}
 
-A great example of how we can enjoy the convenience of including everything in a single file without sacrificing modularity! {{3}}
+A great example of how we can enjoy the {{3}}
+- convenience of including everything in a single file and {{3}}
+- without sacrificing modularity! {{3}}
 
 
 `@script`
-such as Bash (Bourne again shell). {{3}}
-Running an entire project
+The script that uses the import statement to execute all of the other scripts in a project should be at the top level and will be most useful if it is named __main__.py.
+Double underscores around Python names are pronounced dunder.
 
 1. Create a `__main__.py` file in a directory called `my_project`
 2. Include code in the file, e.g. `print("This is my project!")`
