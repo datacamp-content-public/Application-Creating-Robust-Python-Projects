@@ -293,7 +293,7 @@ It is common to run scripts in a shell, for example Bash (Bourne again shell). {
 
 
 ---
-## Running projects
+## Running Projects
 
 ```yaml
 type: "FullSlide"
@@ -301,7 +301,7 @@ key: "bfeb750a7e"
 ```
 
 `@part1`
-In addition to running a module as a script, we can also run an entire project.
+In addition to running modules and scripts, we can also run an entire project.
 
 This requires that the project contain a top-level script called `__main__.py`. {{1}}
 
