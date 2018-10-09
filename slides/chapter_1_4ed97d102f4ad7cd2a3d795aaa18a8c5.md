@@ -84,9 +84,6 @@ Time spent on crafting a good project is an investment in the future.
 Project files can be in subdirectories or in the top-level directory.
 In this example, all of the files are at the top level except for analysis.ipynb, which is in the "code" subdirectory.
 This brings us to our first Python Project Principle: Modularity.
-Analysis.ipynb is not in line with the Modularity Principle,
-because every step in the analysis is done by one file.
-A more modular approach would be to have one file for each step in the analysis.
 
 
 ---
@@ -118,7 +115,9 @@ First Python Project Principle: Modularity
 
 
 `@script`
-
+Analysis.ipynb is not in line with the Modularity Principle,
+because every step in the analysis is done by one file.
+A more modular approach would be to have one file for each step in the analysis.
 
 
 ---
@@ -143,7 +142,11 @@ To get the benefits of modularity and the convenience of a single file: {{2}}
 
 
 `@script`
-Monolithic files can be convenient, but are a bad starting point.
+The opposite of modular is monolithic.
+A monolithic file, like the analysis.ipynb file we say earlier,
+might contain all of the project's code, docs, and output.
+To get the best of both worlds start small
+and then create a separate large file later on.
 
 
 ---
