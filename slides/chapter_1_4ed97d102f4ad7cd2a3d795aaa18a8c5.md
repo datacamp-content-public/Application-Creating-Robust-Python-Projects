@@ -301,7 +301,7 @@ key: "bfeb750a7e"
 ```
 
 `@part1`
-The `import` statement used to execute all of the scripts in a project should be in a top-level script called `__main__.py`.
+The `import` statement used to execute all of the scripts in a project would be most useful in a top-level script called `__main__.py`.
 
 The `__main__.py` script can  {{2}}
 - be run from outside of the project using the project name {{2}}
