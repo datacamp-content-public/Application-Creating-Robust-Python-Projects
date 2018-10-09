@@ -246,7 +246,9 @@ The code above calls the `hello` function only when `say` is run as a script. {{
 
 The `if` statement prevents `hello` from being called when `say` is imported. {{3}}
 
-Adding `hello()` to `say` without the `if` statement, would make `greet` print `Hello World!` twice, because the `say` module, like all `.py` files, is executed immediately upon import! {{4}}
+Adding `hello()` to `say` without the `if` statement makes `greet` print twice! {{4}}
+
+Once when the `say` module is imported and again when `greet` calls `hello`. {{4}}
 
 
 `@script`
