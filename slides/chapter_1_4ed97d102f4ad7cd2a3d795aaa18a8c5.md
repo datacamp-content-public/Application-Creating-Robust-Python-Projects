@@ -146,7 +146,7 @@ The opposite of modular is monolithic.
 A monolithic file, like the analysis.ipynb file we say earlier,
 might contain all of the project's code, docs, and output.
 
-This can be very convenient, but this convenience comes at the price of the benefits of modularity. 
+This can be very convenient, but this convenience comes at a price. 
 
 To get the best of both worlds start small
 and then create a separate large file later on.
@@ -304,9 +304,12 @@ import get_data, clean_data, fit_model, evaluate_model
 
 
 `@script`
-It is common to run scripts in a shell, for example Bash (Bourne again shell). {{3}}
+Scripts in data science projects are typically run in a sequence that be shown as a directed acyclic graph.
 
-3. Type `python greet.py` in a shell and press Enter. {{2}}
+In the sequence, each script does one job and imports the tools it needs from modules in the project.
+
+It can be tedious to run each script one after another.
+Your first instinct may be to combine the scripts into a monolithic file.
 
 
 ---
