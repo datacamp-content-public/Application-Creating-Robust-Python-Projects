@@ -328,9 +328,11 @@ key: "bfeb750a7e"
 `@part1`
 Code that runs scripts is most useful in a top-level script called `__main__.py`.
 
-The `__main__.py` script can  {{2}}
-- be executed from outside of the project using the project name {{2}}
-- work even if the project is turned into a zip file, e.g. `my_project.zip`. {{2}}
+`__main__.py` can be executed from outside of the project using the project name. {{2}}
+
+This can be setup to work anywhere in the file system, but for now we will run projects from one level above the project directory. {{2}}
+
+Interestingly, this works even if the project is turned into a zip file. {{2}}
 
 A great example of how we can enjoy the {{3}}
 - convenience of including everything in a single file and {{3}}
@@ -340,23 +342,12 @@ A great example of how we can enjoy the {{3}}
 `@script`
 The script that uses the import statement to execute all of the other scripts in a project should be at the top level and will be most useful if it is named __main__.py.
 Double underscores around Python names are pronounced dunder.
-
-1. Create a `__main__.py` file in a directory called `my_project`
-2. Include code in the file, e.g. `print("This is my project!")`
-3. Run `python my_project`
-
-Some advantages of this are:
-You can zip the whole project and still run `__main__.py`
-```bash
-python -m zipfile -c my_project.zip my_project/*
-python my_project.zip
-```
-
-Later in the course we will learn other ways to distribute Python code.
+This indicates that the name is special and has some superpowers. 
+In the case of __main__.py, the main superpower is that this script can be executed from outside a project using the project name. This will work even if
 
 
 ---
-## Let's practice running scripts and importing modules!
+## Let's practice working with scripts and modules!
 
 ```yaml
 type: "FinalSlide"
