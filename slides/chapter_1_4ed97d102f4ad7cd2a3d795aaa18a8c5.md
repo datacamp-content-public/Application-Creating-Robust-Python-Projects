@@ -310,6 +310,9 @@ In the sequence, each script does one job and imports the tools it needs from mo
 
 It can be tedious to run each script one after another.
 Your first instinct may be to combine the scripts into a monolithic file.
+Instead, you could write a script to run all of the other scripts in the project.
+A clever way to do this is to use the import statement.
+You can import one script per line or include all of the scripts one line separated by commas.
 
 
 ---
