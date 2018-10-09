@@ -176,7 +176,7 @@ If you begin to notice patterns in the code, it is time to start thinking about 
 According to the Reusability Principle, you should reuse code instead of repeating it. 
 To avoid code repetition, you will need to use functions.
 Functions are reusable blocks of code that can be defined once and then called as many times as needed to get the job done.
-To take our use of functions to the next level, we will define functions in Python code files called modules and then call the functions in Python code files called scripts.
+To take our use of functions to the next level, we will define functions in files called modules and then call the functions in files called scripts.
 
 
 ---
@@ -189,9 +189,8 @@ key: "ae33b5d1d6"
 
 `@part1`
 Modules and scripts
-- are plain-text files that
-- have `.py` extensions and
-- contain only Python code.
+- are Python code files that
+- have `.py` extensions.
 
 Modules and scripts differ in how and why they are used.{{1}}
 
