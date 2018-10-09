@@ -143,7 +143,7 @@ To get the benefits of modularity and the convenience of a single file: {{2}}
 
 `@script`
 The opposite of modular is monolithic.
-A monolithic file, like the analysis.ipynb file we say earlier,
+A monolithic file, like the analysis.ipynb file we saw earlier,
 might contain all of the project's code, docs, and output.
 
 This can be very convenient, but this convenience comes at a price. 
