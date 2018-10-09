@@ -145,6 +145,9 @@ To get the benefits of modularity and the convenience of a single file: {{2}}
 The opposite of modular is monolithic.
 A monolithic file, like the analysis.ipynb file we say earlier,
 might contain all of the project's code, docs, and output.
+
+This can be very convenient, but this convenience comes at the price of the benefits of modularity. 
+
 To get the best of both worlds start small
 and then create a separate large file later on.
 
