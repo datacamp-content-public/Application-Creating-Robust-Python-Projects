@@ -301,12 +301,10 @@ key: "bfeb750a7e"
 ```
 
 `@part1`
-In addition to running modules and scripts, we can also run an entire project.
-
-This requires that the project contain a top-level script called `__main__.py`. {{1}}
+The `import` statement used to execute all of the scripts in a project should be in a top-level script called `__main__.py`.
 
 The `__main__.py` script can  {{2}}
-- execute all of the code in the project by importing each script, {{2}}
+- be run outside of the project, {{2}}
 - accept input from the user, and {{2}}
 - work even if the project is turned into a zip file, e.g. `my_project.zip`. {{2}}
 
