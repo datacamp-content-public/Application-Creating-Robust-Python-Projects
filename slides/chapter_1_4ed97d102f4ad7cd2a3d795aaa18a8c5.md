@@ -258,18 +258,19 @@ The code above calls the `hello` function only when `say` is run as a script. {{
 
 The `if` statement prevents `hello` from being called when `say` is imported. {{3}}
 
-Adding `hello()` to `say` without the `if` statement makes `greet` print twice: {{4}}
+What would happen if `say` included the function call, but not the `if` statement? {{4}}
 
-once when the `say` module is imported and again when `greet` calls `hello`. {{4}}
+Running `greet` would print "Hello World!" twice: once when `say` is imported and then a second time when `greet` calls `hello`. {{5}}
 
 
 `@script`
 A Python code file can be used as both a module and a script.
 
-To make a module/script hybrid we need to use an "if" statement that calls a function only when the file is run as a script and not when it is imported as a module. 
+To make a module/script hybrid we need to use an if statement that calls a function only when the file is run as a script and not when it is imported as a module. 
 
-In the example of the say module and greet script, adding this "if" statement keeps the hello function from being called twice. 
-Once w
+In the example of the say module and greet script, this if statement allows say to print "Hello World!" when it is run, but also keeps the hello function from being called twice when we run the greet script. 
+
+If  Once w
 
 
 ---
