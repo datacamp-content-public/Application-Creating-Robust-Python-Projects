@@ -182,7 +182,7 @@ Modules and scripts differ in how and why they are used.{{1}}
 | Filetype |  How?  |       Why?       |
 |:--------:|:------:|:----------------:|
 | Module   | Import | Define functions |
-| Script   | Run    | Call functions   |
+| Script   | Run    |  Call functions  |
 {{1}}
 
 
@@ -207,13 +207,13 @@ key: "919381ac3b"
 ```
 
 `@part1`
-1. Create a module named `say.py`, which uses the `def` statement to define a function called `hello` that prints `Hello World!` without accepting any input:
+1. A module named `say`, which uses the `def` statement to define a function named `hello` that prints `Hello World!`:
 ```python
 def hello():
        print("Hello World!")
 ```
 
-2. Create a script called `greet.py`, which imports the `say` module and calls the `hello` function:{{1}}
+2. A script named `greet`, which imports the `say` module and calls the `hello` function:{{1}}
 ```python
 import say
 say.hello()
@@ -261,7 +261,7 @@ key: "4b698e100b"
 `@part1`
 It is possible for the same file to be used as both a module and a script.
 
-To demonstrate this, add the code below to the end of `say.py`: {{1}}
+To demonstrate this, we could add the code below to the end of the `say` module: {{1}}
 ```python
 if __name__ == '__main__':
     hello()
@@ -272,7 +272,7 @@ The code above calls the `hello` function only when `say` is run as a script. {{
 
 The `if` statement prevents `hello` from being called when `say` is imported. {{3}}
 
-Adding `hello()` to `say.py` without the `if` statement, would make `greet.py` print `Hello World!` twice, because the entire `say.py` would be run upon import! {{4}}
+Adding `hello()` to `say` without the `if` statement, would make `greet` print `Hello World!` twice, because modules and scripts are executed immediately upon import! {{4}}
 
 
 `@script`
