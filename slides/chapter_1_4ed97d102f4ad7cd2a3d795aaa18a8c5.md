@@ -231,7 +231,9 @@ say.hello()
 
 
 `@script`
-
+Here is an example of a module named say that defines a function named hello.
+Next, there is an example of script that imports the say module and calls its hello function.
+I do not include the .py extension when referring to modules and scripts, nor do I include parentheses in functions names.
 
 
 ---
