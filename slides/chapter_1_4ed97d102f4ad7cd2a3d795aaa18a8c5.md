@@ -172,7 +172,11 @@ To further improve the modularity and reusability of our code, we will {{3}}
 
 
 `@script`
-
+If you begin to notice patterns in the code, it is time to start thinking about the next Python Project Principle: Reusability.
+According to the Reusability Principle, you should reuse code instead of repeating it. 
+To avoid code repetition, you will need to use functions.
+Functions are reusable blocks of code that can be defined once and then called as many times as needed to get the job done.
+To take our use of functions to the next level, we will define functions in Python code files called modules and then call the functions in Python code files called scripts.
 
 
 ---
