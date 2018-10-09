@@ -203,15 +203,10 @@ Modules and scripts differ in how and why they are used.{{1}}
 
 
 `@script`
-It is possible for the same file to be used as both a module and a script.
-```python
-#
-def say_hi():
-    print("Hi!")
-
-if __name__ == '__main__':
-    say_hi()
-```
+Modules and scripts are Python code files with .py extensions.
+They differ only in how and why they are used.
+Modules are imported to define functions (and other Python objects),
+while scripts are run to perform actions (typically by calling functions).
 
 
 ---
