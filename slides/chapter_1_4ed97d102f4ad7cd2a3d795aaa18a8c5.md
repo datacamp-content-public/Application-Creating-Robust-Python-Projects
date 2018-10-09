@@ -236,7 +236,7 @@ say.hello()
 `@script`
 Here is an example module named say that defines a function named hello.
 Next, there is an example script named greet that imports the say module and calls its hello function.
-I do not include the .py extension when referring to modules and scripts, nor do I include parentheses when referring to functions.
+You may have noticed that I do not include the .py extension when referring to modules and scripts.
 
 
 ---
@@ -344,7 +344,7 @@ The script that uses the import statement to execute all of the other scripts in
 Double underscores around Python names are pronounced dunder.
 The double underscores indicate that the name is special.
 Python objects that have such names usually have some superpowers. 
-In the case of __main__.py, the main superpower is that
+The superpower of `__main__.py` is that
 it can be executed from outside of a project using the project name.
 This will work even if the project is zipped!
 
