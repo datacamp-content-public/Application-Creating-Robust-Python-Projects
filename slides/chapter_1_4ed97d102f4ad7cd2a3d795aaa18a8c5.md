@@ -342,11 +342,11 @@ Code that runs scripts is most useful in a top-level script called `__main__.py`
 
 This can be setup to work anywhere in the file system, but for now we will run projects from one level above the project directory. {{2}}
 
-Interestingly, this works even if the project is turned into a zip file. {{2}}
+Interestingly, this works even if the project is turned into a zip file. {{3}}
 
-A great example of how we can enjoy the {{3}}
-- convenience of including everything in a single file and {{3}}
-- without sacrificing modularity! {{3}}
+A great example of how we can enjoy the {{4}}
+- convenience of including everything in a single file and {{4}}
+- without sacrificing modularity! {{4}}
 
 
 `@script`
