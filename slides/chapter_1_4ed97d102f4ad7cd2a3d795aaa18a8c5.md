@@ -60,7 +60,7 @@ A project is a directory that contains project files.
 
 Also, an opportunity to exercise empathy for anyone who might use your code (including your future self!) {{1}}
 
-Project files may be organized into subdirectories or kept at the top-level.{{2}}
+Project files may be organized into subdirectories or kept at the top level.{{2}}
 
 ```
 my_project
